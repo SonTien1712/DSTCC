@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Đào tạo định kỳ siết chặt an toàn thi công",
+        "excerpt": "Đảm bảo an toàn tuyệt đối tại các dự án mũi nhọn, nâng cao ý thức toàn đội ngũ trong mùa thi công cao điểm.",
+        "date": "2026-03-09",
+        "dateLabel": "09 Tháng 3, 2026",
+        "image": "/sites/default/files/2026-03/DJI_0746.png",
+        "fallback": "https://placehold.co/400x220/003f7f/ffffff?text=An+toàn+thi+công",
+        "url": "#"
+    },
+    {
+        "id": 2,
+        "title": "Phương pháp thi công cáp chủ PPWS",
+        "excerpt": "Kỹ thuật tiên tiến áp dụng trong xây dựng cầu dây văng hiện đại, đảm bảo độ chính xác và an toàn kết cấu.",
+        "date": "2025-10-15",
+        "dateLabel": "15 Tháng 10, 2025",
+        "image": "/sites/default/files/styles/large/public/2025-10/xcqawfqa_ua.png",
+        "fallback": "https://placehold.co/400x220/002554/ffffff?text=Cáp+PPWS",
+        "url": "#"
+    },
+    {
+        "id": 3,
+        "title": "Contech 2025 và dấu ấn DSTCC",
+        "excerpt": "Triển lãm thiết bị máy móc và công nghệ thi công lớn nhất miền Bắc — DSTCC khẳng định vị thế hàng đầu.",
+        "date": "2025-05-06",
+        "dateLabel": "06 Tháng 5, 2025",
+        "image": "/sites/default/files/styles/large/public/2025-05/back_1.jpg",
+        "fallback": "https://placehold.co/400x220/1a5276/ffffff?text=Contech+2025",
+        "url": "#"
+    }
+]

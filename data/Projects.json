@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+[
+  { "id": 1, "title": "Đường cao tốc Đà Nẵng – Quảng Ngãi", "category": "Thí nghiệm & Kiểm định", "location": "Đà Nẵng – Quảng Ngãi", "year": "2018", "image": "https://placehold.co/600x400/004080/ffffff?text=Cao+tốc+ĐN–QN" },
+  { "id": 2, "title": "Cầu Cà Đú 1 – Quảng Ngãi", "category": "Tư vấn giám sát", "location": "Quảng Ngãi", "year": "2020", "image": "https://placehold.co/600x400/002b5e/ffffff?text=Cầu+Cà+Đú+1" },
+  { "id": 3, "title": "Cầu Năm Ống – Quảng Trị", "category": "Kiểm định kết cấu", "location": "Quảng Trị", "year": "2021", "image": "https://placehold.co/600x400/1a5276/ffffff?text=Cầu+Năm+Ống" },
+  { "id": 4, "title": "Đường ven biển Cát Tiến – Diêm Vân", "category": "Thí nghiệm vật liệu", "location": "Bình Định", "year": "2022", "image": "https://placehold.co/600x400/154360/ffffff?text=Ven+biển+Bình+Định" },
+  { "id": 5, "title": "Cầu Biện – Đà Nẵng", "category": "Tư vấn thiết kế", "location": "Đà Nẵng", "year": "2023", "image": "https://placehold.co/600x400/0e3456/ffffff?text=Cầu+Biện+ĐN" },
+  { "id": 6, "title": "Đường ven biển Liên Chiểu – Đà Nẵng", "category": "Khảo sát địa chất", "location": "Đà Nẵng", "year": "2024", "image": "https://placehold.co/600x400/ffae00/333333?text=Cảng+Liên+Chiểu" }
+=======
+[
+  { "id": 1, "title": "Đường cao tốc Đà Nẵng – Quảng Ngãi", "category": "Thí nghiệm & Kiểm định", "location": "Đà Nẵng – Quảng Ngãi", "year": "2018", "image": "https://placehold.co/600x400/004080/ffffff?text=Cao+tốc+ĐN–QN" },
+  { "id": 2, "title": "Cầu Cà Đú 1 – Quảng Ngãi", "category": "Tư vấn giám sát", "location": "Quảng Ngãi", "year": "2020", "image": "https://placehold.co/600x400/002b5e/ffffff?text=Cầu+Cà+Đú+1" },
+  { "id": 3, "title": "Cầu Năm Ống – Quảng Trị", "category": "Kiểm định kết cấu", "location": "Quảng Trị", "year": "2021", "image": "https://placehold.co/600x400/1a5276/ffffff?text=Cầu+Năm+Ống" },
+  { "id": 4, "title": "Đường ven biển Cát Tiến – Diêm Vân", "category": "Thí nghiệm vật liệu", "location": "Bình Định", "year": "2022", "image": "https://placehold.co/600x400/154360/ffffff?text=Ven+biển+Bình+Định" },
+  { "id": 5, "title": "Cầu Biện – Đà Nẵng", "category": "Tư vấn thiết kế", "location": "Đà Nẵng", "year": "2023", "image": "https://placehold.co/600x400/0e3456/ffffff?text=Cầu+Biện+ĐN" },
+  { "id": 6, "title": "Đường ven biển Liên Chiểu – Đà Nẵng", "category": "Khảo sát địa chất", "location": "Đà Nẵng", "year": "2024", "image": "https://placehold.co/600x400/ffae00/333333?text=Cảng+Liên+Chiểu" }
+>>>>>>> cd113c0 (update project)
+]

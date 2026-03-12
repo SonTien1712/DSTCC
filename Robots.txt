@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Không index file dữ liệu thô
+Disallow: /assets/data/
+
+# Cho phép crawl CSS & JS để render đúng
+Allow: /assets/css/
+Allow: /assets/js/
+
+Sitemap: https://dstcc.com.vn/sitemap.xml
