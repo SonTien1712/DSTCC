@@ -37,39 +37,41 @@
    ====================================================== */
 @media (max-width: 991px) {
     .header-main {
-        padding: 0;
+        padding: 14px 0;
     }
 
     .header-main .container {
-        padding: 10px 16px;
+        padding: 0 16px;
     }
 
     .header-main .navbar-brand img {
-        height: 40px;
+        height: 54px;
     }
 
     /* Hamburger button */
     .navbar-toggler {
         padding: 6px 10px;
-        border: 1.5px solid rgba(0, 63, 127, 0.25) !important;
-        border-radius: 6px !important;
-        background: rgba(0, 63, 127, 0.05);
+        border: none !important;
+        background: transparent;
+        font-size: 1.6rem;
+        color: var(--primary-dark);
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
     }
 
     /* Mobile dropdown menu */
     #navbarResponsive {
         background: #fff;
-        border-top: 3px solid var(--accent);
-        padding: 12px 0 16px;
-        box-shadow: 0 8px 24px rgba(0, 40, 100, 0.12);
-        border-radius: 0 0 12px 12px;
-        margin: 0 -16px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 10px -16px 0 -16px;
     }
 
     .navbar-nav {
-        gap: 0 !important;
+        gap: 6px !important;
     }
 
     .nav-item {
@@ -78,13 +80,13 @@
 
     .nav-item:last-child {
         border-bottom: none;
-        margin-top: 12px;
-        padding-top: 12px;
+        margin-top: 10px;
+        padding-top: 10px;
     }
 
     .nav-link {
-        padding: 12px 4px !important;
-        font-size: 1.05rem !important;
+        padding: 12px 0 !important;
+        font-size: 1rem !important;
     }
 
     .nav-link::after {
@@ -115,6 +117,17 @@
         padding: 13px !important;
         border-radius: 6px !important;
         font-size: 1rem !important;
+    }
+
+    /* Hide Top Info Bar Right on Mobile */
+    .top-info-right {
+        display: none;
+    }
+
+    .top-info-left {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
     }
 }
 

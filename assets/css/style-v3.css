@@ -133,6 +133,44 @@ img {
         display: none;
     }
 }
+/* ==========================
+TOP INFO BAR
+========================== */
+
+.top-info-bar{
+    background:var(--primary);
+    color:#fff;
+    font-size:13px;
+    padding:6px 0;
+}
+
+.top-info-right span {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* Header main adjustments to sit below top info bar */
+
+.top-info-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top-info-left span{
+    margin-right:18px;
+}
+
+.top-info-left i{
+    color:var(--accent);
+    margin-right:6px;
+}
+
+.top-info-right{
+    opacity:.85;
+}
 
 /* ======================================================
    2. HEADER / NAVBAR
@@ -146,24 +184,23 @@ img {
     z-index: 1000;
     transition: all var(--transition);
     border-bottom: 2px solid transparent;
-    padding: 26px 0;
-    transition: padding .35s ease, background .35s ease, box-shadow .35s ease;
+    padding: 12px 0;
+    transition: background .35s ease, box-shadow .35s ease, border-bottom-color .35s ease;
 }
 
 .header-main.scrolled {
     background: rgba(255, 255, 255, 0.97);
     border-bottom-color: var(--accent);
     box-shadow: 0 4px 24px rgba(0, 40, 100, 0.12);
-    padding: 12px 0;
 }
 
 .header-main .navbar-brand img {
-    height: 72px;
+    height: 88px;
     transition: transform .35s ease;
 }
 
-.header-main.scrolled .navbar-brand img {
-    height: 48px;
+.navbar-nav {
+    gap: 20px;
 }
 
 .nav-link {
@@ -171,7 +208,7 @@ img {
     color: var(--primary) !important;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.05rem;
     letter-spacing: 0.06em;
     padding: 10px 14px !important;
     position: relative;
@@ -196,22 +233,58 @@ img {
 .dropdown-menu {
     border: none;
     border-radius: var(--radius);
-    box-shadow: var(--shadow-md);
-    margin-top: 8px;
+    box-shadow: 0 10px 40px rgba(0, 37, 84, 0.1);
+    margin-top: 10px;
     border-top: 3px solid var(--accent);
+    padding: 12px 0;
+    min-width: 240px;
 }
 
 .dropdown-item {
     font-family: 'Inter', sans-serif;
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 10px 24px;
+    font-size: 0.95rem;
     font-weight: 500;
+    color: var(--primary);
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
 }
 
-.dropdown-item:hover {
-    background: var(--bg-light);
-    color: var(--accent);
+.dropdown-item i {
+    transition: transform 0.25s ease;
+    font-size: 1.1rem;
 }
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background: rgba(255, 174, 0, 0.08);
+    color: var(--primary);
+    padding-left: 28px;
+}
+
+.dropdown-item:hover i {
+    transform: scale(1.15);
+}
+
+/* Hover dropdown for Desktop */
+@media (min-width: 992px) {
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        animation: showDropdown 0.3s ease forwards;
+    }
+}
+
+@keyframes showDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ======================================================
    3. HERO BANNER
@@ -219,8 +292,10 @@ img {
 .hero-banner {
     position: relative;
     height: 100vh;
-    background: linear-gradient(160deg, rgba(0, 37, 84, 0.5) 0%, rgba(0, 63, 127, 0.7) 100%),
-        url('../assets/css/image/hero-banner.png') center/cover no-repeat;
+    min-height: 600px;
+    background: linear-gradient(135deg, rgba(0, 37, 84, 0.3) 0%, rgba(0, 25, 50, 0.65) 100%),
+        url('../image/hero-banner.png') center/cover no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;

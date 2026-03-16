@@ -1,52 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Trang chủ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dstcc.com.vn/</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://dstcc.vn/</loc>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://dstcc.com.vn/"/>
   </url>
-
-  <!-- Sections (single-page, dùng anchor) -->
   <url>
-    <loc>https://dstcc.com.vn/#gioi-thieu</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://dstcc.vn/gioi-thieu/index.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dstcc.com.vn/#linh-vuc</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dstcc.com.vn/#phong-thi-nghiem</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dstcc.com.vn/#du-an</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://dstcc.vn/dich-vu/index.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dstcc.com.vn/#tin-tuc</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://dstcc.vn/dich-vu/thi-nghiem-las-xd.html</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dstcc.vn/dich-vu/tu-van-giam-sat.html</loc>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dstcc.vn/du-an/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dstcc.vn/tin-tuc/index.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dstcc.com.vn/#lien-he</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://dstcc.vn/tai-lieu-ky-thuat/index.html</loc>
     <priority>0.6</priority>
   </url>
-
+  <url>
+    <loc>https://dstcc.vn/lien-he/index.html</loc>
+    <priority>0.9</priority>
+  </url>
 </urlset>
