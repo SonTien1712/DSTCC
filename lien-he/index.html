@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Liên hệ - DSTCC</title>
+    <meta name="description" content="Liên hệ chuyên gia tư vấn công trình giao thông của DSTCC ngay hôm nay">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Swiper.js -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS: Base → Mobile (load mobile AFTER base) -->
+    <link href="../assets/css/style-v3.css" rel="stylesheet">
+    <link href="../assets/css/style-mobile.css" rel="stylesheet">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+    <!-- ============================================================
+     HEADER / NAVBAR
+     ============================================================ -->
+    <nav id="mainNav" class="navbar navbar-expand-lg header-main">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../image/anhdaidien_png.png" alt="DSTCC Logo"
+                    onerror="this.src='https://placehold.co/160x48/003f7f/ffae00?text=DSTCC'">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="../gioi-thieu/index.html">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../dich-vu/index.html" role="button"
+                            data-bs-toggle="dropdown">Lĩnh vực</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../dich-vu/index.html">
+                                    <i class="bi bi-buildings me-2 text-warning"></i>Thiết kế & Thi công</a></li>
+                            <li><a class="dropdown-item" href="../dich-vu/thi-nghiem-las-xd.html">
+                                    <i class="bi bi-eyedropper me-2 text-warning"></i>Thí nghiệm & Kiểm định</a></li>
+                            <li><a class="dropdown-item" href="../dich-vu/index.html">
+                                    <i class="bi bi-geo-alt me-2 text-warning"></i>Khảo sát & Lập dự án</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../du-an/index.html">Dự án</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../tin-tuc/index.html">Tin tức</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-hero-primary text-decoration-none py-2 px-4" href="../lien-he/index.html">
+                            <i class="bi bi-telephone-fill me-1"></i> Liên hệ ngay
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+    <main style="padding-top: 80px;">
+        <section class="section-pad contact-section">
+            <div class="container">
+                <div class="text-center mb-4 mb-lg-5 reveal visible">
+                    <h1 class="section-title center mx-auto d-inline-block">Liên hệ với chúng tôi</h1>
+                    <p class="mt-4 text-muted mx-auto" style="max-width:540px;font-size:0.98rem;">
+                        Gửi yêu cầu tư vấn kèm hồ sơ thầu (PDF, CAD, DWG). Phản hồi trong vòng <strong>24 giờ làm
+                            việc</strong>.
+                    </p>
+                </div>
+
+                <div class="contact-card reveal visible">
+                    <div class="row g-0">
+                        <!-- Form B2B — order 1 on mobile -->
+                        <div class="col-lg-8" style="order: 1;">
+                            <div class="form-area">
+                                <h3>Gửi yêu cầu tư vấn</h3>
+                                <p class="form-subtitle">Hỗ trợ đính kèm bản vẽ CAD, PDF hồ sơ thầu · Tích hợp Web3Forms
+                                </p>
+
+                                <div class="form-success" id="form-success">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <h4>Gửi thành công!</h4>
+                                    <p class="text-muted">Cảm ơn bạn. Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.
+                                    </p>
+                                </div>
+
+                                <form id="b2b-form" action="https://api.web3forms.com/submit" method="POST"
+                                    enctype="multipart/form-data">
+                                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                                    <input type="hidden" name="subject" value="[DSTCC] Yêu cầu tư vấn mới từ Website">
+                                    <input type="hidden" name="redirect" value="">
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6 col-12">
+                                            <label class="form-label">Họ và tên <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" name="name" required
+                                                placeholder="Nguyễn Văn A">
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <label class="form-label">Chức vụ / Đơn vị</label>
+                                            <input type="text" class="form-control" name="position"
+                                                placeholder="Kỹ sư / Ban QLDA ...">
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <label class="form-label">Số điện thoại <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control" name="phone" required
+                                                placeholder="0388 279 279">
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <label class="form-label">Email <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" name="email" required
+                                                placeholder="email@congty.vn">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Loại dịch vụ cần tư vấn</label>
+                                            <select class="form-select" name="service_type">
+                                                <option value="" disabled selected>-- Chọn lĩnh vực --</option>
+                                                <option>Thí nghiệm & Kiểm định vật liệu</option>
+                                                <option>Tư vấn thiết kế công trình</option>
+                                                <option>Giám sát thi công</option>
+                                                <option>Khảo sát địa hình, địa chất</option>
+                                                <option>Gia cố & Sửa chữa kết cấu</option>
+                                                <option>Nghiên cứu & Chuyển giao công nghệ</option>
+                                                <option>Khác</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Nội dung yêu cầu <span
+                                                    class="text-danger">*</span></label>
+                                            <textarea class="form-control" name="message" rows="4" required
+                                                placeholder="Mô tả ngắn gọn yêu cầu, địa điểm công trình, quy mô dự án..."></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">
+                                                Đính kèm hồ sơ
+                                                <span class="text-muted fw-normal">(PDF, DOC, DWG · tối đa 10MB)</span>
+                                            </label>
+                                            <div class="file-upload-wrapper" id="file-drop-zone">
+                                                <input type="file" name="attachment"
+                                                    accept=".pdf,.doc,.docx,.dwg,.dxf,.rar,.zip" multiple
+                                                    id="file-input">
+                                                <i class="bi bi-cloud-arrow-up-fill d-block"></i>
+                                                <div class="file-upload-text">
+                                                    <strong>Chạm để chọn file</strong> hoặc kéo thả<br>
+                                                    <span class="d-none d-md-inline">Hỗ trợ: PDF, DOC, DWG, DXF, RAR,
+                                                        ZIP</span>
+                                                </div>
+                                                <div id="file-name-display"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="privacy-check"
+                                                    required>
+                                                <label class="form-check-label text-muted" for="privacy-check"
+                                                    style="font-size:.85rem;">
+                                                    Tôi đồng ý để DSTCC lưu trữ thông tin và liên hệ lại theo yêu cầu.
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <button type="submit" class="btn-submit-b2b" id="submit-btn">
+                                                <span id="btn-text"><i class="bi bi-send-fill me-2"></i>Gửi yêu cầu tư
+                                                    vấn</span>
+                                                <span id="btn-loading" style="display:none;">
+                                                    <span class="spinner-border spinner-border-sm me-2"></span>Đang
+                                                    gửi...
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar — order 2 on mobile (appears below form) -->
+                        <div class="col-lg-4 contact-sidebar" style="order: 2;">
+                            <h3>Thông tin liên hệ</h3>
+                            <p class="subtitle">Đội ngũ kỹ sư tư vấn sẵn sàng hỗ trợ bạn từ thứ Hai đến thứ Sáu.</p>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                                <div>
+                                    <strong>Trụ sở chính</strong>
+                                    <span>Số 10 Xuân Thiều 25, Phường Hải Vân, TP. Đà Nẵng</span>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                                <div>
+                                    <strong>Hotline</strong>
+                                    <span><a href="tel:+84913446353"
+                                            style="color:rgba(255,255,255,0.85);font-weight:600;">(+84) 913 446
+                                            353</a></span>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                                <div>
+                                    <strong>Email</strong>
+                                    <span><a href="mailto:DSTCC.JSC@gmail.com"
+                                            style="color:rgba(255,255,255,0.8);">DSTCC.JSC@gmail.com</a></span>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
+                                <div>
+                                    <strong>Giờ làm việc</strong>
+                                    <span>Thứ 2 – Thứ 6: 07:30 – 17:30<br>Thứ 7: 07:30 – 12:00</span>
+                                </div>
+                            </div>
+
+                            <div class="social-links mt-4">
+                                <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                                <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+    <footer class="footer-main">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-4 col-12">
+                    <div class="footer-brand">
+                        <img src="../image/anhdaidien_png.png" alt="DSTCC"
+                            onerror="this.src='https://placehold.co/140x44/ffffff/003f7f?text=DSTCC'">
+                    </div>
+                    <p class="small mt-3 mb-3" style="line-height:1.6;">
+                        Công ty CP Khoa học Công nghệ &amp; Tư vấn Xây dựng Đà Nẵng — Đối tác tin cậy cho mọi công trình
+                        giao thông.
+                    </p>
+                    <p class="mb-1"><i class="bi bi-geo-alt me-2 text-warning"></i>Số 10 Xuân Thiều 25, P.Hải Vân, TP.Đà
+                        Nẵng</p>
+                    <p class="mb-1"><i class="bi bi-telephone me-2 text-warning"></i>
+                        <a href="tel:+84913446353">(+84) 913 446 353</a>
+                    </p>
+                    <p class="mb-1"><i class="bi bi-envelope me-2 text-warning"></i>
+                        <a href="mailto:DSTCC.JSC@gmail.com">DSTCC.JSC@gmail.com</a>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Dịch vụ</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../dich-vu/index.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Thiết kế
+                                &amp; Thi công</a></li>
+                        <li><a href="../dich-vu/thi-nghiem-las-xd.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Thí
+                                nghiệm LAS-XD</a></li>
+                        <li><a href="../dich-vu/tu-van-giam-sat.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Tư vấn giám
+                                sát</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Điều hướng</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../gioi-thieu/index.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Giới
+                                thiệu</a></li>
+                        <li><a href="../du-an/index.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Dự
+                                án</a></li>
+                        <li><a href="../tin-tuc/index.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Tin
+                                tức</a>
+                        </li>
+                        <li><a href="../lien-he/index.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Liên
+                                hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            <div class="d-flex flex-wrap justify-content-between align-items-center footer-bottom">
+                <span>© 2026 DSTCC. All rights reserved. — MST: 0401770xxx</span>
+                <span>Designed &amp; Developed by DSTCC Tech Team</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const navbar = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // ---- FILE UPLOAD ----
+        document.getElementById('file-input').addEventListener('change', function () {
+            const display = document.getElementById('file-name-display');
+            if (this.files.length > 0) {
+                const names = Array.from(this.files).map(f => f.name).join(', ');
+                display.textContent = '📎 ' + names;
+                display.style.display = 'block';
+            }
+        });
+
+        const dropZone = document.getElementById('file-drop-zone');
+        ['dragenter', 'dragover'].forEach(ev =>
+            dropZone.addEventListener(ev, e => { e.preventDefault(); dropZone.style.borderColor = 'var(--primary)'; })
+        );
+        ['dragleave', 'drop'].forEach(ev =>
+            dropZone.addEventListener(ev, () => { dropZone.style.borderColor = ''; })
+        );
+
+        // ---- FORM SUBMIT ----
+        document.getElementById('b2b-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+            btn.disabled = true;
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
+                const data = await res.json();
+                if (data.success) {
+                    this.style.display = 'none';
+                    document.getElementById('form-success').style.display = 'block';
+                } else {
+                    alert('Có lỗi xảy ra. Vui lòng liên hệ trực tiếp qua Hotline.');
+                    btnText.style.display = 'inline-flex'; btnLoading.style.display = 'none'; btn.disabled = false;
+                }
+            } catch (err) {
+                alert('Không thể kết nối. Vui lòng gửi email: DSTCC.JSC@gmail.com');
+                btnText.style.display = 'inline-flex'; btnLoading.style.display = 'none'; btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

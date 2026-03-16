@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>DSTCC – Công ty CP Khoa học Công nghệ & Tư vấn Xây dựng Đà Nẵng</title>
     <meta name="description"
         content="Hơn 15 năm kinh nghiệm thí nghiệm kiểm định, tư vấn thiết kế và giám sát công trình cầu đường tại miền Trung – Tây Nguyên.">
@@ -15,14 +15,16 @@
     <!-- Swiper.js -->
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
+    <!-- CSS: Base → Mobile (load mobile AFTER base) -->
     <link href="../assets/css/style-v3.css" rel="stylesheet">
+    <link href="../assets/css/style-mobile.css" rel="stylesheet">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVPLCVM7M8"></script>
@@ -32,23 +34,53 @@
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
 
     <!-- ============================================================
-     DOT NAVIGATION — Fixed sidebar scroll tracker  [IMPROVEMENT 1]
+     DOT NAVIGATION — Fixed sidebar scroll tracker (Desktop only)
      ============================================================ -->
     <nav id="dot-nav" aria-label="Điều hướng nhanh">
-        <a href="#hero" class="active" data-section="hero"> <span class="dot-label">Trang chủ</span><span
+        <a href="#hero" class="active" data-section="hero"><span class="dot-label">Trang chủ</span><span
                 class="dot"></span></a>
-        <a href="#gioi-thieu" data-section="gioi-thieu"> <span class="dot-label">Giới thiệu</span><span
+        <a href="#gioi-thieu" data-section="gioi-thieu"><span class="dot-label">Giới thiệu</span><span
                 class="dot"></span></a>
-        <a href="#linh-vuc" data-section="linh-vuc"> <span class="dot-label">Lĩnh vực</span><span
+        <a href="#linh-vuc" data-section="linh-vuc"><span class="dot-label">Lĩnh vực</span><span class="dot"></span></a>
+        <a href="#phong-thi-nghiem" data-section="phong-thi-nghiem"><span class="dot-label">Phòng TN</span><span
                 class="dot"></span></a>
-        <a href="#phong-thi-nghiem" data-section="phong-thi-nghiem"> <span class="dot-label">Phòng TN</span><span
+        <a href="#chuyen-gia" data-section="chuyen-gia"><span class="dot-label">Chuyên gia</span><span
                 class="dot"></span></a>
-        <a href="#chuyen-gia" data-section="chuyen-gia"> <span class="dot-label">Chuyên gia</span><span
-                class="dot"></span></a>
-        <a href="#du-an" data-section="du-an"> <span class="dot-label">Dự án</span><span class="dot"></span></a>
-        <a href="#tin-tuc" data-section="tin-tuc"> <span class="dot-label">Tin tức</span><span class="dot"></span></a>
-        <a href="#lien-he" data-section="lien-he"> <span class="dot-label">Liên hệ</span><span class="dot"></span></a>
+        <a href="#du-an" data-section="du-an"><span class="dot-label">Dự án</span><span class="dot"></span></a>
+        <a href="#tin-tuc" data-section="tin-tuc"><span class="dot-label">Tin tức</span><span class="dot"></span></a>
+        <a href="#lien-he" data-section="lien-he"><span class="dot-label">Liên hệ</span><span class="dot"></span></a>
     </nav>
+
+    <!-- ============================================================
+     MOBILE BOTTOM NAVIGATION BAR ← NEW
+     ============================================================ -->
+    <div class="mobile-bottom-nav" id="mobileBottomNav">
+        <div class="mobile-bottom-nav-inner">
+            <a href="#hero" class="mobile-nav-item active" data-section="hero">
+                <i class="bi bi-house-fill"></i>
+                <span>Trang chủ</span>
+            </a>
+            <a href="#du-an" class="mobile-nav-item" data-section="du-an">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+                <span>Dự án</span>
+            </a>
+            <!-- CTA CALL — center highlighted button -->
+            <a href="tel:+84913446353" class="mobile-nav-item cta-call">
+                <div class="mobile-nav-cta-btn">
+                    <i class="bi bi-telephone-fill"></i>
+                </div>
+                <span>Gọi ngay</span>
+            </a>
+            <a href="#tin-tuc" class="mobile-nav-item" data-section="tin-tuc">
+                <i class="bi bi-newspaper"></i>
+                <span>Tin tức</span>
+            </a>
+            <a href="#lien-he" class="mobile-nav-item" data-section="lien-he">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>Liên hệ</span>
+            </a>
+        </div>
+    </div>
 
     <!-- ============================================================
      HEADER / NAVBAR
@@ -56,32 +88,33 @@
     <nav id="mainNav" class="navbar navbar-expand-lg header-main">
         <div class="container">
             <a class="navbar-brand" href="#hero">
-                <img src="../image/anhdaidien.png" alt="DSTCC Logo"
+                <img src="../image/anhdaidien_png.png" alt="DSTCC Logo"
                     onerror="this.src='https://placehold.co/160x48/003f7f/ffae00?text=DSTCC'">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive">
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-center gap-1">
-                    <li class="nav-item"><a class="nav-link" href="#gioi-thieu">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu/index.html">Giới thiệu</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#linh-vuc" role="button"
+                        <a class="nav-link dropdown-toggle" href="dich-vu/index.html" role="button"
                             data-bs-toggle="dropdown">Lĩnh vực</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#linh-vuc"><i
-                                        class="bi bi-buildings me-2 text-warning"></i>Thiết kế & Thi công</a></li>
-                            <li><a class="dropdown-item" href="#phong-thi-nghiem"><i
-                                        class="bi bi-eyedropper me-2 text-warning"></i>Thí nghiệm & Kiểm định</a></li>
-                            <li><a class="dropdown-item" href="#linh-vuc"><i
-                                        class="bi bi-geo-alt me-2 text-warning"></i>Khảo sát & Lập dự án</a></li>
+                            <li><a class="dropdown-item" href="dich-vu/index.html">
+                                    <i class="bi bi-buildings me-2 text-warning"></i>Thiết kế & Thi công</a></li>
+                            <li><a class="dropdown-item" href="dich-vu/thi-nghiem-las-xd.html">
+                                    <i class="bi bi-eyedropper me-2 text-warning"></i>Thí nghiệm & Kiểm định</a></li>
+                            <li><a class="dropdown-item" href="dich-vu/index.html">
+                                    <i class="bi bi-geo-alt me-2 text-warning"></i>Khảo sát & Lập dự án</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#du-an">Dự án</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tin-tuc">Tin tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="du-an/index.html">Dự án</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tin-tuc/index.html">Tin tức</a></li>
                     <li class="nav-item ms-lg-2">
-                        <a class="btn btn-hero-primary text-decoration-none py-2 px-4" href="#lien-he">
+                        <a class="btn btn-hero-primary text-decoration-none py-2 px-4" href="lien-he/index.html">
                             <i class="bi bi-telephone-fill me-1"></i> Liên hệ ngay
                         </a>
                     </li>
@@ -94,26 +127,82 @@
      HERO SECTION
      ============================================================ -->
     <header id="hero" class="hero-banner">
-        <div class="hero-logo">
-            <img src="../image/anhdaidien.png" alt="DSTCC"
-                onerror="this.src='https://placehold.co/90x90/003f7f/ffae00?text=DS'">
-        </div>
-        <p class="hero-eyebrow">Mã LAS-XD 15.021 · ISO 9001:2015 Certified</p>
-        <h1 class="hero-title px-3">Niềm tin cho<br>mọi công trình</h1>
-        <p class="hero-sub px-3">Hơn 15 năm kinh nghiệm thí nghiệm kiểm định, tư vấn thiết kế và giám sát công trình tại
-            miền Trung – Tây Nguyên.</p>
-        <div class="hero-ctas">
-            <a href="#du-an" class="btn-hero-primary">Xem dự án tiêu biểu</a>
-            <a href="#lien-he" class="btn-hero-outline">Gửi hồ sơ thầu</a>
+        <!-- Decorative overlays (desktop) -->
+        <div class="hero-overlay"></div>
+        <div class="hero-grid-pattern"></div>
+
+        <div class="hero-inner container px-3 px-lg-0">
+            <!-- Logo badge -->
+            <div class="hero-logo d-none d-lg-block">
+                <img src="../image/anhdaidien_png.png" alt="DSTCC"
+                    onerror="this.src='https://placehold.co/90x90/003f7f/ffae00?text=DS'">
+            </div>
+
+            <!-- Eyebrow badges -->
+            <div class="hero-eyebrow">
+                <span class="hero-eyebrow-badge"><i class="bi bi-patch-check-fill"></i> Mã LAS-XD 15.021</span>
+                <span class="hero-eyebrow-badge"><i class="bi bi-award-fill"></i> ISO 9001:2015</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="hero-title">
+                Niềm tin cho<br>
+                <span class="hero-title-accent">mọi công trình</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="hero-sub">
+                Hơn 15 năm kinh nghiệm thí nghiệm kiểm định, tư vấn thiết kế và giám sát công trình tại
+                miền Trung – Tây Nguyên.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-ctas">
+                <a href="#du-an" class="btn-hero-primary">Xem dự án tiêu biểu</a>
+                <a href="#lien-he" class="btn-hero-outline">Gửi hồ sơ thầu</a>
+            </div>
+
+            <!-- Stats bar -->
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">15+</span>
+                    <span class="hero-stat-lbl">Năm kinh nghiệm</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">+</span>
+                    <span class="hero-stat-lbl">Dự án hoàn thành</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">LAS-XD</span>
+                    <span class="hero-stat-lbl">Được Bộ Xây Dựng cấp phép</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">ISO</span>
+                    <span class="hero-stat-lbl">9001:2015 Certified</span>
+                </div>
+            </div>
         </div>
 
+        <!-- Scroll indicator -->
+        <div class="hero-scroll">
+            <svg viewBox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="22" height="32" rx="11" stroke-width="2" />
+                <circle cx="12" cy="9" r="3" fill="currentColor">
+                    <animate attributeName="cy" values="9;20;9" dur="2s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+            <span class="hero-scroll-label">Cuộn xuống</span>
+        </div>
     </header>
 
     <!-- ============================================================
-     TRUST BADGE BAR  [IMPROVEMENT 3 — Trust Signals]
+     TRUST BADGE BAR
      ============================================================ -->
     <section id="trust-bar" class="trust-bar">
-        <div class="container-fluid px-lg-5">
+        <div class="container-fluid px-0 px-lg-5">
             <div class="trust-bar-inner">
                 <div class="trust-badge">
                     <div class="trust-badge-icon"><i class="bi bi-patch-check-fill"></i></div>
@@ -166,7 +255,7 @@
      ============================================================ -->
     <section id="gioi-thieu" class="section-pad">
         <div class="container">
-            <div class="row align-items-center g-5">
+            <div class="row align-items-center g-4 g-lg-5">
                 <div class="col-lg-6 reveal">
                     <div class="about-img-wrap">
                         <img src="/sites/default/files/2026-02/about-2.jpg" alt="Công trình DSTCC"
@@ -181,23 +270,22 @@
                     <h2 class="section-title mb-4">Về Công ty<br>CP KHCN & Tư vấn<br>Xây dựng Đà Nẵng</h2>
                     <p class="mt-4" style="font-size:1.02rem;line-height:1.75;color:var(--text-muted);">
                         Công ty cổ phần khoa học công nghệ và tư vấn xây dựng Đà Nẵng <strong>(DSTCC)</strong>, thành
-                        lập năm 2011,
-                        là đối tác tin cậy hàng đầu tại khu vực miền Trung – Tây Nguyên trong các lĩnh vực nghiên cứu
-                        khoa học,
-                        thí nghiệm kiểm định, tư vấn giám sát và khảo sát chuyên ngành xây dựng.
+                        lập năm 2011, là đối tác tin cậy hàng đầu tại khu vực miền Trung – Tây Nguyên trong các lĩnh vực
+                        nghiên cứu
+                        khoa học, thí nghiệm kiểm định, tư vấn giám sát và khảo sát chuyên ngành xây dựng.
                     </p>
                     <p style="font-size:1rem;line-height:1.75;color:var(--text-muted);">
                         Với phòng thí nghiệm trọng điểm được công nhận tiêu chuẩn <strong>LAS-XD</strong> và đội ngũ
-                        chuyên gia, chúng tôi cam kết kết quả chính xác, tiến độ nghiêm ngặt và
-                        giải pháp kỹ thuật tối ưu cho từng công trình.
+                        chuyên gia, chúng tôi cam kết kết quả chính xác, tiến độ nghiêm ngặt và giải pháp kỹ thuật tối
+                        ưu cho từng công trình.
                     </p>
-                    <ul class="about-check list-unstyled mt-4 mb-5">
+                    <ul class="about-check list-unstyled mt-4 mb-4 mb-lg-5">
                         <li><i class="bi bi-check-circle-fill"></i>Chất lượng đạt tiêu chuẩn quốc tế ISO 9001:2015</li>
                         <li><i class="bi bi-check-circle-fill"></i>Phòng thí nghiệm LAS-XD được Bộ GTVT công nhận</li>
                         <li><i class="bi bi-check-circle-fill"></i>Đội ngũ Thạc sĩ chuyên sâu đầu ngành</li>
                         <li><i class="bi bi-check-circle-fill"></i>Kinh nghiệm thực chiến trên 200+ dự án lớn nhỏ</li>
                     </ul>
-                    <a href="#lien-he"
+                    <a href="lien-he/index.html"
                         class="btn-hero-primary text-decoration-none d-inline-flex align-items-center gap-2">
                         Tư vấn miễn phí <i class="bi bi-arrow-right"></i>
                     </a>
@@ -218,7 +306,7 @@
                         Giải pháp tổng thể từ khảo sát, thiết kế, thí nghiệm đến giám sát thi công cho mọi công trình
                         giao thông.
                     </p>
-                    <a href="#lien-he" class="btn-hero-outline d-inline-block mt-3"
+                    <a href="lien-he/index.html" class="btn-hero-outline d-inline-block mt-3"
                         style="font-size:.85rem;padding:10px 22px;">
                         Yêu cầu báo giá
                     </a>
@@ -277,11 +365,11 @@
     </section>
 
     <!-- ============================================================
-     NĂNG LỰC PHÒNG THÍ NGHIỆM — Bootstrap Tabs  [IMPROVEMENT 1]
+     NĂNG LỰC PHÒNG THÍ NGHIỆM
      ============================================================ -->
     <section id="phong-thi-nghiem" class="section-pad lab-section">
         <div class="container">
-            <div class="row mb-5">
+            <div class="row mb-4 mb-lg-5">
                 <div class="col-lg-8 reveal">
                     <h2 class="section-title">Năng lực Phòng thí nghiệm</h2>
                     <p class="mt-4 text-muted" style="font-size:1rem;max-width:640px;line-height:1.7;">
@@ -291,7 +379,6 @@
                 </div>
             </div>
 
-            <!-- Tab Navigation -->
             <div class="lab-tabs reveal">
                 <ul class="nav nav-tabs" id="labTabs" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -302,28 +389,28 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-nhua" type="button">
-                            <i class="bi bi-droplet me-1"></i> Thí nghiệm nhựa
+                            <i class="bi bi-droplet me-1"></i> Nhựa đường
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-be-tong" type="button">
-                            <i class="bi bi-bricks me-1"></i> Bê tông &amp; Vật liệu
+                            <i class="bi bi-bricks me-1"></i> Bê tông
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-hien-truong" type="button">
-                            <i class="bi bi-geo me-1"></i> Hiện trường &amp; Cọc
+                            <i class="bi bi-geo me-1"></i> Hiện trường
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-ket-cau" type="button">
-                            <i class="bi bi-wrench me-1"></i> Kim loại &amp; Kết cấu
+                            <i class="bi bi-wrench me-1"></i> Kim loại
                         </button>
                     </li>
                 </ul>
 
                 <div class="tab-content pt-2">
-                    <!-- Tab 1: Kéo nén -->
+                    <!-- Tab 1 -->
                     <div class="tab-pane fade show active" id="tab-keo-nen">
                         <div class="equipment-grid">
                             <div class="equipment-item">
@@ -370,8 +457,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab 2: Nhựa -->
+                    <!-- Tab 2 -->
                     <div class="tab-pane fade" id="tab-nhua">
                         <div class="equipment-grid">
                             <div class="equipment-item">
@@ -418,8 +504,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab 3: Bê tông -->
+                    <!-- Tab 3 -->
                     <div class="tab-pane fade" id="tab-be-tong">
                         <div class="equipment-grid">
                             <div class="equipment-item">
@@ -466,14 +551,13 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab 4: Hiện trường -->
+                    <!-- Tab 4 -->
                     <div class="tab-pane fade" id="tab-hien-truong">
                         <div class="equipment-grid">
                             <div class="equipment-item">
                                 <div class="equipment-icon"><i class="bi bi-soundwave"></i></div>
                                 <div>
-                                    <div class="equipment-name">Thiết bị siêu âm cọc khoan nhồi</div>
+                                    <div class="equipment-name">Siêu âm cọc khoan nhồi</div>
                                     <div class="equipment-spec">Cross-hole sonic logging</div>
                                 </div>
                             </div>
@@ -502,7 +586,7 @@
                                 <div class="equipment-icon"><i class="bi bi-geo-fill"></i></div>
                                 <div>
                                     <div class="equipment-name">Máy GPS RTK khảo sát</div>
-                                    <div class="equipment-spec">Trimble R10 accuracy ±5mm</div>
+                                    <div class="equipment-spec">Trimble R10 ±5mm</div>
                                 </div>
                             </div>
                             <div class="equipment-item">
@@ -514,8 +598,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab 5: Kim loại -->
+                    <!-- Tab 5 -->
                     <div class="tab-pane fade" id="tab-ket-cau">
                         <div class="equipment-grid">
                             <div class="equipment-item">
@@ -562,23 +645,22 @@
                             </div>
                         </div>
                     </div>
-
-                </div><!-- /tab-content -->
-            </div><!-- /lab-tabs -->
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ============================================================
-     BAN CỐ VẤN CHUYÊN MÔN — Swiper.js  [IMPROVEMENT 3]
+     BAN CỐ VẤN CHUYÊN MÔN
      ============================================================ -->
     <section id="chuyen-gia" class="section-pad advisors-section">
         <div class="container">
-            <div class="row align-items-end mb-5">
+            <div class="row align-items-end mb-4 mb-lg-5">
                 <div class="col-lg-7 reveal">
                     <h2 class="section-title">Ban Cố Vấn Chuyên Môn</h2>
                     <p class="mt-4 text-muted" style="font-size:1rem;max-width:560px;line-height:1.7;">
-                        Dàn lãnh đạo và cố vấn với học hàm Phó Giáo Sư, Tiến Sĩ Khoa học là nền tảng bảo chứng uy tín
-                        kỹ thuật của DSTCC trên mọi dự án.
+                        Dàn lãnh đạo và cố vấn với học hàm Phó Giáo Sư, Tiến Sĩ Khoa học là nền tảng bảo chứng uy tín kỹ
+                        thuật của DSTCC trên mọi dự án.
                     </p>
                 </div>
             </div>
@@ -590,8 +672,7 @@
                             <div class="advisor-card-top">
                                 <div class="advisor-avatar">TS</div>
                             </div>
-                            <div class="advisor-card-body">
-                                <span class="advisor-rank">Tiến sĩ Kỹ thuật</span>
+                            <div class="advisor-card-body"><span class="advisor-rank">Tiến sĩ Kỹ thuật</span>
                                 <div class="advisor-name">Nguyễn Tiến Sơn</div>
                                 <div class="advisor-specialty">Giám đốc – Chuyên gia kết cấu cầu & tư vấn thiết kế công
                                     trình giao thông</div>
@@ -603,8 +684,7 @@
                             <div class="advisor-card-top">
                                 <div class="advisor-avatar">PGS</div>
                             </div>
-                            <div class="advisor-card-body">
-                                <span class="advisor-rank">Phó Giáo Sư · TS</span>
+                            <div class="advisor-card-body"><span class="advisor-rank">Phó Giáo Sư · TS</span>
                                 <div class="advisor-name">Cố vấn Kỹ thuật</div>
                                 <div class="advisor-specialty">Chuyên ngành cơ học kết cấu & vật liệu xây dựng tiên tiến
                                 </div>
@@ -616,8 +696,7 @@
                             <div class="advisor-card-top">
                                 <div class="advisor-avatar">ThS</div>
                             </div>
-                            <div class="advisor-card-body">
-                                <span class="advisor-rank">Thạc sĩ Kỹ thuật</span>
+                            <div class="advisor-card-body"><span class="advisor-rank">Thạc sĩ Kỹ thuật</span>
                                 <div class="advisor-name">Trưởng Phòng Thí Nghiệm</div>
                                 <div class="advisor-specialty">Kiểm định chất lượng & hiệu chuẩn phương tiện đo lường
                                     chuyên ngành</div>
@@ -629,8 +708,7 @@
                             <div class="advisor-card-top">
                                 <div class="advisor-avatar">KS</div>
                             </div>
-                            <div class="advisor-card-body">
-                                <span class="advisor-rank">Kỹ sư cao cấp</span>
+                            <div class="advisor-card-body"><span class="advisor-rank">Kỹ sư cao cấp</span>
                                 <div class="advisor-name">Trưởng Phòng Tư Vấn</div>
                                 <div class="advisor-specialty">Giám sát thi công cầu, hầm và các công trình giao thông
                                     trọng điểm</div>
@@ -642,8 +720,7 @@
                             <div class="advisor-card-top">
                                 <div class="advisor-avatar">TS</div>
                             </div>
-                            <div class="advisor-card-body">
-                                <span class="advisor-rank">Tiến sĩ Địa kỹ thuật</span>
+                            <div class="advisor-card-body"><span class="advisor-rank">Tiến sĩ Địa kỹ thuật</span>
                                 <div class="advisor-name">Chuyên gia Khảo sát</div>
                                 <div class="advisor-specialty">Khảo sát địa chất công trình, địa hình & nền móng đặc
                                     biệt</div>
@@ -657,16 +734,16 @@
     </section>
 
     <!-- ============================================================
-     DỰ ÁN TIÊU BIỂU — Rendered from JSON  [IMPROVEMENT 2]
+     DỰ ÁN TIÊU BIỂU
      ============================================================ -->
     <section id="du-an" class="section-pad" style="background:var(--white);">
-        <div class="container-fluid px-4 px-lg-5">
+        <div class="container-fluid px-3 px-lg-5">
             <div class="row align-items-end mb-4">
                 <div class="col-lg-7 reveal">
                     <h2 class="section-title">Dự án tiêu biểu</h2>
                 </div>
-                <div class="col-lg-5 text-lg-end reveal">
-                    <div class="project-filters justify-content-lg-end">
+                <div class="col-lg-5 reveal">
+                    <div class="project-filters mt-3 mt-lg-0 justify-content-lg-end">
                         <button class="filter-btn active" data-filter="all">Tất cả</button>
                         <button class="filter-btn" data-filter="Thí nghiệm & Kiểm định">Thí nghiệm</button>
                         <button class="filter-btn" data-filter="Tư vấn giám sát">Tư vấn</button>
@@ -675,19 +752,17 @@
                 </div>
             </div>
 
-            <!-- Loading indicator -->
             <div id="projects-loader">
                 <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
                 <span>Đang tải dự án...</span>
             </div>
 
-            <!-- Projects grid — injected by JS -->
-            <div class="row g-4" id="projects-grid" style="display:none;"></div>
+            <div class="row g-3 g-lg-4" id="projects-grid" style="display:none;"></div>
 
-            <div class="text-center mt-5 reveal">
-                <a href="#lien-he" class="btn btn-outline-primary px-5 py-2 fw-bold rounded-pill"
+            <div class="text-center mt-4 mt-lg-5 reveal">
+                <a href="lien-he/index.html" class="btn btn-outline-primary px-4 px-lg-5 py-2 fw-bold rounded-pill"
                     style="border-width:2px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.08em;font-size:1rem;">
-                    Liên hệ để xem hồ sơ năng lực đầy đủ <i class="bi bi-arrow-right ms-2"></i>
+                    Xem hồ sơ năng lực đầy đủ <i class="bi bi-arrow-right ms-2"></i>
                 </a>
             </div>
         </div>
@@ -698,19 +773,19 @@
      ============================================================ -->
     <section id="tin-tuc" class="section-pad" style="background:var(--bg-section);">
         <div class="container">
-            <div class="row align-items-end mb-5">
-                <div class="col-lg-7 reveal">
+            <div class="row align-items-end mb-4 mb-lg-5">
+                <div class="col-8 col-lg-7 reveal">
                     <h2 class="section-title">Tin tức &amp; Sự kiện</h2>
                 </div>
-                <div class="col-lg-5 text-lg-end reveal">
-                    <a href="#" class="btn btn-outline-primary rounded-pill px-4"
-                        style="font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.06em;">
-                        Xem tất cả <i class="bi bi-arrow-right ms-1"></i>
+                <div class="col-4 col-lg-5 text-end reveal">
+                    <a href="#" class="btn btn-outline-primary rounded-pill px-3 px-lg-4"
+                        style="font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.06em;font-size:0.85rem;">
+                        Xem thêm <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 reveal">
+            <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 reveal">
                     <div class="classic-card">
                         <img src="/sites/default/files/2026-03/DJI_0746.png" alt="Tin 1"
                             onerror="this.src='https://placehold.co/400x220/003f7f/ffffff?text=Tin+tức+1'">
@@ -723,7 +798,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 reveal">
+                <div class="col-12 col-md-6 col-lg-4 reveal">
                     <div class="classic-card">
                         <img src="/sites/default/files/styles/large/public/2025-10/xcqawfqa_%E1%BB%ABa.png" alt="Tin 2"
                             onerror="this.src='https://placehold.co/400x220/002554/ffffff?text=Tin+tức+2'">
@@ -736,7 +811,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 reveal">
+                <div class="col-12 col-md-6 col-lg-4 reveal">
                     <div class="classic-card">
                         <img src="/sites/default/files/styles/large/public/2025-05/back_1.jpg" alt="Tin 3"
                             onerror="this.src='https://placehold.co/400x220/1a5276/ffffff?text=Tin+tức+3'">
@@ -753,207 +828,17 @@
         </div>
     </section>
 
-    <!-- ============================================================
-     LIÊN HỆ B2B — Upgraded Form  [IMPROVEMENT 4]
-     ============================================================ -->
-    <section id="lien-he" class="section-pad contact-section">
-        <div class="container">
-            <div class="text-center mb-5 reveal">
-                <h2 class="section-title center mx-auto d-inline-block">Liên hệ với chúng tôi</h2>
-                <p class="mt-4 text-muted mx-auto" style="max-width:540px;font-size:0.98rem;">
-                    Gửi yêu cầu tư vấn kèm hồ sơ thầu (PDF, CAD, DWG). Chúng tôi phản hồi trong vòng <strong>24 giờ làm
-                        việc</strong>.
-                </p>
-            </div>
 
-            <div class="contact-card reveal">
-                <div class="row g-0">
-                    <!-- Sidebar thông tin -->
-                    <div class="col-lg-4 contact-sidebar">
-                        <h3>Thông tin liên hệ</h3>
-                        <p class="subtitle">Đội ngũ kỹ sư tư vấn sẵn sàng hỗ trợ bạn từ thứ Hai đến thứ Sáu.</p>
-
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                            <div>
-                                <strong>Trụ sở chính</strong>
-                                <span>Số 10 Xuân Thiều 25, Phường Hải Vân, TP. Đà Nẵng</span>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
-                            <div>
-                                <strong>Hotline</strong>
-                                <span><a href="tel:+84913446353" style="color:rgba(255,255,255,0.8);">(+84) 913 446
-                                        353</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
-                            <div>
-                                <strong>Email</strong>
-                                <span><a href="mailto:DSTCC.JSC@gmail.com"
-                                        style="color:rgba(255,255,255,0.8);">DSTCC.JSC@gmail.com</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
-                            <div>
-                                <strong>Giờ làm việc</strong>
-                                <span>Thứ 2 – Thứ 6: 07:30 – 17:30<br>Thứ 7: 07:30 – 12:00</span>
-                            </div>
-                        </div>
-
-                        <div class="social-links mt-4">
-                            <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
-                            <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Form B2B nâng cấp -->
-                    <div class="col-lg-8">
-                        <div class="form-area">
-                            <h3>Gửi yêu cầu tư vấn</h3>
-                            <p class="form-subtitle">Hỗ trợ đính kèm bản vẽ CAD, PDF hồ sơ thầu · Tích hợp Web3Forms</p>
-
-                            <!-- Success message -->
-                            <div class="form-success" id="form-success">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <h4>Gửi thành công!</h4>
-                                <p class="text-muted">Cảm ơn bạn. Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.</p>
-                            </div>
-
-                            <!-- Form — Web3Forms action (thay YOUR_ACCESS_KEY bằng key thật) -->
-                            <form id="b2b-form" action="https://api.web3forms.com/submit" method="POST"
-                                enctype="multipart/form-data">
-                                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                                <input type="hidden" name="subject" value="[DSTCC] Yêu cầu tư vấn mới từ Website">
-                                <input type="hidden" name="redirect" value="">
-
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Họ và tên <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="name" required
-                                            placeholder="Nguyễn Văn A">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Chức vụ / Đơn vị</label>
-                                        <input type="text" class="form-control" name="position"
-                                            placeholder="Kỹ sư / Ban QLDA ...">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Số điện thoại <span
-                                                class="text-danger">*</span></label>
-                                        <input type="tel" class="form-control" name="phone" required
-                                            placeholder="0388 279 279">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Email <span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" name="email" required
-                                            placeholder="email@congty.vn">
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label">Loại dịch vụ cần tư vấn</label>
-                                        <select class="form-select" name="service_type">
-                                            <option value="" disabled selected>-- Chọn lĩnh vực --</option>
-                                            <option>Thí nghiệm & Kiểm định vật liệu</option>
-                                            <option>Tư vấn thiết kế công trình</option>
-                                            <option>Giám sát thi công</option>
-                                            <option>Khảo sát địa hình, địa chất</option>
-                                            <option>Gia cố & Sửa chữa kết cấu</option>
-                                            <option>Nghiên cứu & Chuyển giao công nghệ</option>
-                                            <option>Khác</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label">Nội dung yêu cầu <span
-                                                class="text-danger">*</span></label>
-                                        <textarea class="form-control" name="message" rows="4" required
-                                            placeholder="Mô tả ngắn gọn yêu cầu, địa điểm công trình, quy mô dự án..."></textarea>
-                                    </div>
-
-                                    <!-- FILE UPLOAD — NEW -->
-                                    <div class="col-12">
-                                        <label class="form-label">
-                                            Đính kèm hồ sơ
-                                            <span class="text-muted fw-normal">(PDF, DOC, DWG, CAD, ZIP · tối đa
-                                                10MB)</span>
-                                        </label>
-                                        <div class="file-upload-wrapper" id="file-drop-zone">
-                                            <input type="file" name="attachment"
-                                                accept=".pdf,.doc,.docx,.dwg,.dxf,.rar,.zip" multiple id="file-input">
-                                            <i class="bi bi-cloud-arrow-up-fill d-block"></i>
-                                            <div class="file-upload-text">
-                                                <strong>Kéo thả file vào đây</strong> hoặc click để chọn<br>
-                                                Hỗ trợ: PDF, DOC, DWG, DXF, RAR, ZIP
-                                            </div>
-                                            <div id="file-name-display"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="privacy-check" required>
-                                            <label class="form-check-label text-muted" for="privacy-check"
-                                                style="font-size:.85rem;">
-                                                Tôi đồng ý để DSTCC lưu trữ thông tin và liên hệ lại theo yêu cầu.
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 mt-2">
-                                        <button type="submit" class="btn-submit-b2b" id="submit-btn">
-                                            <span id="btn-text"><i class="bi bi-send-fill me-2"></i>Gửi yêu cầu tư
-                                                vấn</span>
-                                            <span id="btn-loading" style="display:none;">
-                                                <span class="spinner-border spinner-border-sm me-2"></span>Đang gửi...
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- 
- ============================================================
-     ĐỐI TÁC & KHÁCH HÀNG — Marquee
-     ============================================================ -->
-    <!-- <section class="marquee-section">
-    <p class="section-eyebrow">Đối tác &amp; Khách hàng tiêu biểu</p>
-    <div class="marquee-wrapper">
-        <div class="marquee-content">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=ĐƯỜNG+HCM" alt="Đường HCM">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=BỘ+GTVT" alt="Bộ GTVT">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=UBND+ĐN" alt="UBND Đà Nẵng">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=VEC" alt="VEC">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=PMU+ĐN" alt="PMU Đà Nẵng">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=CIENCO+5" alt="CIENCO 5"> -->
-    <!-- Duplicate for seamless loop
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=ĐƯỜNG+HCM" alt="Đường HCM">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=BỘ+GTVT" alt="Bộ GTVT">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=UBND+ĐN" alt="UBND Đà Nẵng">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=VEC" alt="VEC">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=PMU+ĐN" alt="PMU Đà Nẵng">
-            <img src="https://placehold.co/120x60/cccccc/ffffff?text=CIENCO+5" alt="CIENCO 5">
-        </div>
-    </div>
-</section>  -->
 
     <!-- ============================================================
      FOOTER
      ============================================================ -->
     <footer class="footer-main">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-4 col-12">
                     <div class="footer-brand">
-                        <img src="../image/anhdaidien.png" alt="DSTCC"
+                        <img src="../image/anhdaidien_png.png" alt="DSTCC"
                             onerror="this.src='https://placehold.co/140x44/ffffff/003f7f?text=DSTCC'">
                     </div>
                     <p class="small mt-3 mb-3" style="line-height:1.6;">
@@ -969,14 +854,17 @@
                         <a href="mailto:DSTCC.JSC@gmail.com">DSTCC.JSC@gmail.com</a>
                     </p>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-6">
                     <h5>Dịch vụ</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#linh-vuc"><i class="bi bi-chevron-right me-1 text-warning small"></i>Thiết kế
+                        <li><a href="dich-vu/index.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Thiết kế
                                 &amp; Thi công</a></li>
-                        <li><a href="#phong-thi-nghiem"><i class="bi bi-chevron-right me-1 text-warning small"></i>Thí
+                        <li><a href="dich-vu/thi-nghiem-las-xd.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Thí
                                 nghiệm LAS-XD</a></li>
-                        <li><a href="#linh-vuc"><i class="bi bi-chevron-right me-1 text-warning small"></i>Tư vấn giám
+                        <li><a href="dich-vu/tu-van-giam-sat.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Tư vấn giám
                                 sát</a></li>
                         <li><a href="#linh-vuc"><i class="bi bi-chevron-right me-1 text-warning small"></i>Khảo sát địa
                                 chất</a></li>
@@ -984,21 +872,25 @@
                                 KH</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-6">
                     <h5>Điều hướng</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#gioi-thieu"><i class="bi bi-chevron-right me-1 text-warning small"></i>Giới
+                        <li><a href="gioi-thieu/index.html"><i
+                                    class="bi bi-chevron-right me-1 text-warning small"></i>Giới
                                 thiệu</a></li>
                         <li><a href="#chuyen-gia"><i class="bi bi-chevron-right me-1 text-warning small"></i>Chuyên
                                 gia</a></li>
-                        <li><a href="#du-an"><i class="bi bi-chevron-right me-1 text-warning small"></i>Dự án</a></li>
-                        <li><a href="#tin-tuc"><i class="bi bi-chevron-right me-1 text-warning small"></i>Tin tức</a>
+                        <li><a href="du-an/index.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Dự
+                                án</a></li>
+                        <li><a href="tin-tuc/index.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Tin
+                                tức</a>
                         </li>
-                        <li><a href="#lien-he"><i class="bi bi-chevron-right me-1 text-warning small"></i>Liên hệ</a>
+                        <li><a href="lien-he/index.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Liên
+                                hệ</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-12">
                     <h5>Chứng nhận &amp; Kết nối</h5>
                     <div class="d-flex gap-3 mb-4 flex-wrap">
                         <div class="text-center">
@@ -1035,21 +927,19 @@
     <!-- ============================================================
      SCRIPTS
      ============================================================ -->
-    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Swiper.js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // ---- 1. STICKY NAVBAR SCROLL CLASS ----
+        // ---- 1. STICKY NAVBAR ----
         const navbar = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 60);
         });
 
-        // ---- 2. DOT NAVIGATION — Active state on scroll ----
+        // ---- 2. DOT NAVIGATION ----
         (function () {
-            const sections = ['hero', 'gioi-thieu', 'linh-vuc', 'phong-thi-nghiem', 'chuyen-gia', 'du-an', 'tin-tuc', 'lien-he'];
+            const sections = ['hero', 'gioi-thieu', 'linh-vuc', 'phong-thi-nghiem', 'chuyen-gia', 'du-an', 'tin-tuc'];
             const dots = document.querySelectorAll('#dot-nav a');
 
             const observer = new IntersectionObserver((entries) => {
@@ -1077,7 +967,47 @@
             });
         })();
 
-        // ---- 3. SCROLL REVEAL ----
+        // ---- 3. MOBILE BOTTOM NAV ACTIVE STATE ----
+        (function () {
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item[data-section]');
+            const sectionIds = ['hero', 'du-an', 'tin-tuc'];
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        mobileNavItems.forEach(item => item.classList.remove('active'));
+                        const active = document.querySelector(`.mobile-nav-item[data-section="${id}"]`);
+                        if (active) active.classList.add('active');
+                    }
+                });
+            }, { rootMargin: '-30% 0px -60% 0px' });
+
+            sectionIds.forEach(s => {
+                const el = document.getElementById(s);
+                if (el) observer.observe(el);
+            });
+
+            mobileNavItems.forEach(item => {
+                item.addEventListener('click', e => {
+                    e.preventDefault();
+                    const href = item.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            // Close mobile navbar if open
+                            const navCollapse = document.getElementById('navbarResponsive');
+                            if (navCollapse && navCollapse.classList.contains('show')) {
+                                bootstrap.Collapse.getInstance(navCollapse)?.hide();
+                            }
+                        }
+                    }
+                });
+            });
+        })();
+
+        // ---- 4. SCROLL REVEAL ----
         (function () {
             const els = document.querySelectorAll('.reveal');
             const io = new IntersectionObserver((entries) => {
@@ -1087,30 +1017,28 @@
                         io.unobserve(e.target);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { threshold: 0.08 });
             els.forEach(el => io.observe(el));
         })();
 
-        // ---- 4. SWIPER — Expert Advisors ----
+        // ---- 5. SWIPER ----
         new Swiper('.advisor-swiper', {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 16,
             loop: true,
             autoplay: { delay: 4000, disableOnInteraction: false },
             pagination: { el: '.swiper-pagination', clickable: true },
             breakpoints: {
-                640: { slidesPerView: 2 },
-                992: { slidesPerView: 3 },
-                1200: { slidesPerView: 4 }
+                480: { slidesPerView: 1.3, spaceBetween: 14 },
+                640: { slidesPerView: 2, spaceBetween: 16 },
+                992: { slidesPerView: 3, spaceBetween: 20 },
+                1200: { slidesPerView: 4, spaceBetween: 20 }
             }
         });
 
-        // ---- 5. PROJECTS — Fetch from JSON + Filter  [IMPROVEMENT 2] ----
+        // ---- 6. PROJECTS ----
         (function () {
-            let allProjects = [];
-
-            // Inline data (fallback since this is a static file demo)
-            allProjects = [
+            let allProjects = [
                 { id: 1, title: "Đường cao tốc Đà Nẵng – Quảng Ngãi", category: "Thí nghiệm & Kiểm định", location: "Đà Nẵng – Quảng Ngãi", year: "2018", image: "https://placehold.co/600x400/003f7f/ffffff?text=Cao+tốc" },
                 { id: 2, title: "Cầu Cà Đú 1 – Quảng Ngãi", category: "Tư vấn giám sát", location: "Quảng Ngãi", year: "2020", image: "https://placehold.co/600x400/002554/ffffff?text=Cầu+Cà+Đú" },
                 { id: 3, title: "Cầu Năm Ống – Quảng Trị", category: "Kiểm định kết cấu", location: "Quảng Trị", year: "2021", image: "https://placehold.co/600x400/1a5276/ffffff?text=Cầu+Năm+Ống" },
@@ -1119,11 +1047,10 @@
                 { id: 6, title: "Đường ven biển Liên Chiểu", category: "Khảo sát địa chất", location: "Đà Nẵng", year: "2024", image: "https://placehold.co/600x400/f5a800/333333?text=Liên+Chiểu" }
             ];
 
-            // Try to fetch from JSON (works when served from a web server)
             fetch('../data/Projects.json')
                 .then(r => r.json())
                 .then(data => { allProjects = data; renderProjects('all'); })
-                .catch(() => renderProjects('all')); // fallback to inline data
+                .catch(() => renderProjects('all'));
 
             function renderProjects(filter) {
                 const grid = document.getElementById('projects-grid');
@@ -1131,30 +1058,28 @@
                 const filtered = filter === 'all' ? allProjects : allProjects.filter(p => p.category === filter);
 
                 grid.innerHTML = filtered.map(p => `
-            <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="project-card">
-                    <img src="${p.image}" alt="${p.title}" loading="lazy"
-                         onerror="this.src='https://placehold.co/600x400/003f7f/ffffff?text=${encodeURIComponent(p.title)}'">
-                    <div class="project-info">
-                        <span class="project-cat">${p.category}</span>
-                        <h4>${p.title}</h4>
-                        <div class="project-meta">
-                            <i class="bi bi-geo-alt-fill"></i>${p.location}
-                            <span style="opacity:.5">·</span>
-                            <i class="bi bi-calendar3"></i>${p.year}
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                        <div class="project-card">
+                            <img src="${p.image}" alt="${p.title}" loading="lazy"
+                                 onerror="this.src='https://placehold.co/600x400/003f7f/ffffff?text=${encodeURIComponent(p.title)}'">
+                            <div class="project-info">
+                                <span class="project-cat">${p.category}</span>
+                                <h4>${p.title}</h4>
+                                <div class="project-meta">
+                                    <i class="bi bi-geo-alt-fill"></i>${p.location}
+                                    <span style="opacity:.5">·</span>
+                                    <i class="bi bi-calendar3"></i>${p.year}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>`).join('');
+                    </div>`).join('');
 
                 loader.style.display = 'none';
-                grid.style.display = 'flex';
-                grid.style.flexWrap = 'wrap';
+                grid.style.display = '';
             }
 
             renderProjects('all');
 
-            // Filter buttons
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.addEventListener('click', function () {
                     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1164,57 +1089,7 @@
             });
         })();
 
-        // ---- 6. FILE UPLOAD DISPLAY ----
-        document.getElementById('file-input').addEventListener('change', function () {
-            const display = document.getElementById('file-name-display');
-            if (this.files.length > 0) {
-                const names = Array.from(this.files).map(f => f.name).join(', ');
-                display.textContent = '📎 ' + names;
-                display.style.display = 'block';
-            }
-        });
-
-        // Drag & drop highlight
-        const dropZone = document.getElementById('file-drop-zone');
-        ['dragenter', 'dragover'].forEach(ev =>
-            dropZone.addEventListener(ev, e => { e.preventDefault(); dropZone.style.borderColor = 'var(--primary)'; })
-        );
-        ['dragleave', 'drop'].forEach(ev =>
-            dropZone.addEventListener(ev, () => { dropZone.style.borderColor = ''; })
-        );
-
-        // ---- 7. FORM SUBMIT — Web3Forms with loading state ----
-        document.getElementById('b2b-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const btn = document.getElementById('submit-btn');
-            const btnText = document.getElementById('btn-text');
-            const btnLoading = document.getElementById('btn-loading');
-
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'inline-flex';
-            btn.disabled = true;
-
-            try {
-                const formData = new FormData(this);
-                const res = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST', body: formData
-                });
-                const data = await res.json();
-
-                if (data.success) {
-                    this.style.display = 'none';
-                    document.getElementById('form-success').style.display = 'block';
-                } else {
-                    alert('Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua Hotline.');
-                    btnText.style.display = 'inline-flex'; btnLoading.style.display = 'none'; btn.disabled = false;
-                }
-            } catch (err) {
-                alert('Không thể kết nối. Vui lòng gửi email trực tiếp: DSTCC.JSC@gmail.com');
-                btnText.style.display = 'inline-flex'; btnLoading.style.display = 'none'; btn.disabled = false;
-            }
-        });
-
-        // ---- 8. Facebook Messenger Plugin ----
+        // ---- 8. Facebook Messenger ----
         var chatbox = document.createElement('div');
         chatbox.id = 'fb-customer-chat';
         chatbox.className = 'fb-customerchat';
@@ -1229,6 +1104,54 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+
+    <!-- ✅ Schema: LocalBusiness -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Công ty CP Khoa học Công nghệ & Tư vấn Xây dựng Đà Nẵng (DSTCC)",
+  "alternateName": "DSTCC",
+  "url": "https://dstcc.com.vn",
+  "logo": "https://dstcc.vn/image/anhdaidien.png",
+  "image": "https://dstcc.vn/image/og-thumbnail.jpg",
+  "description": "Thí nghiệm kiểm định vật liệu xây dựng, tư vấn thiết kế, giám sát thi công và khảo sát địa chất tại miền Trung – Tây Nguyên.",
+  "foundingDate": "2011",
+  "telephone": "+84913446353",
+  "email": "DSTCC.JSC@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Số 10 Xuân Thiều 26",
+    "addressLocality": "Đà Nẵng",
+    "addressRegion": "Đà Nẵng",
+    "postalCode": "550000",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "16.1172",
+    "longitude": "108.2022"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "17:30"
+    },
+    
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "LAS-XD 15.021" },
+    { "@type": "EducationalOccupationalCredential", "name": "ISO 9001:2015" }
+  ],
+  "areaServed": ["Đà Nẵng","Quảng Nam","Quảng Ngãi","Bình Định","Thừa Thiên Huế","Quảng Trị","Kon Tum","Gia Lai"],
+  "sameAs": [
+    "https://www.facebook.com/DSTCC",
+    "https://www.youtube.com/@DSTCC"
+  ]
+}
+</script>
 
 </body>
 
