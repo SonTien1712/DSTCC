@@ -1,0 +1,493 @@
+/* =========================================================
+   ABOUT US PAGE CSS - DSTCC
+   ========================================================= */
+
+/* 1. HERO BANNER ABOUT */
+.about-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 37, 84, 0.6), rgba(0, 37, 84, 0.8)), url('https://placehold.co/1920x800/003f7f/ffffff?text=Header+Banner') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 60px;
+}
+.about-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* 2. TỔNG QUAN (OVERVIEW) */
+.about-overview {
+    padding: 60px 0;
+    background: url('https://placehold.co/1920x1080/f4f6f9/eef1f5?text=Bg+Thong+Ke') center/cover fixed;
+    border-radius: var(--radius-lg);
+    margin-bottom: 80px;
+    position: relative;
+    box-shadow: var(--shadow-md);
+}
+.about-overview::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: var(--radius-lg);
+}
+.about-overview .container {
+    position: relative;
+    z-index: 2;
+}
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+.stat-item .num {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: 'Barlow Condensed', sans-serif;
+    line-height: 1;
+}
+.stat-item .prefix {
+    font-size: 2rem;
+    color: var(--accent);
+    vertical-align: super;
+}
+.stat-item .lbl {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* 3. THƯ NGỎ (OPEN LETTER) */
+.about-letter {
+    position: relative;
+    background: url('https://placehold.co/1920x1080/2c3e50/1e2a38?text=Thu+Ngo+Bg') center/cover no-repeat fixed;
+    padding: 100px 0;
+    color: var(--white);
+    margin-bottom: 80px;
+}
+.about-letter::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 37, 84, 0.75);
+}
+.letter-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 50px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.letter-content h2 {
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+.letter-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #e2e8f0;
+}
+
+/* 4. TẦM NHÌN - SỨ MỆNH (VISION & MISSION) */
+.vision-mission-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.vm-flex {
+    flex: 1 1 50%;
+    min-width: 300px;
+}
+.vm-text {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.vm-text h3 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.vm-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+.vm-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 350px;
+}
+
+@media(max-width: 768px) {
+    .vm-reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+/* 5. GIÁ TRỊ CỐT LÕI (CORE VALUES) */
+.core-values {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+.value-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    height: 100%;
+    border-bottom: 4px solid transparent;
+}
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-bottom-color: var(--accent);
+}
+.value-card h3 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.value-card p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* 6. ĐỘI NGŨ LÃNH ĐẠO (LEADERSHIP) - ẢNH LỚN THEO YÊU CẦU */
+.leadership-section {
+    padding: 90px 0;
+    background: var(--white);
+}
+.leader-card-large {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all var(--transition);
+    position: relative;
+    /* Loại bỏ bóng và màu nền để làm giống layout lớn của Minh Đức */
+}
+.leader-card-large .leader-img {
+    width: 100%;
+    /* Tỉ lệ dọc hẹp, ảnh ngực trở lên (portrait) */
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #eef1f5;
+}
+.leader-card-large .leader-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+.leader-card-large:hover .leader-img img {
+    transform: scale(1.05);
+}
+.leader-card-large .leader-info {
+    padding: 24px 10px 10px;
+    text-align: left;
+}
+.leader-card-large .leader-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.leader-card-large .leader-role {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.4;
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+}
+
+/* Modal if needed or specific layout tweaks */
+.custom-swiper-pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+.custom-swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: var(--border);
+    opacity: 1;
+}
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--accent);
+    transform: scale(1.2);
+}
+
+/* ---- REVEAL ANIMATIONS ---- */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* =========================================================
+   7. BAN CỐ VẤN CHUYÊN MÔN — REDESIGN
+   ========================================================= */
+
+.advisors-section {
+    padding: 100px 0 110px;
+    background: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle decorative circle in background */
+.advisors-section::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,63,127,0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+.advisors-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,168,0,0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* --- Section Header --- */
+.advisors-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.advisors-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(245, 168, 0, 0.12);
+    padding: 5px 18px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(245, 168, 0, 0.25);
+}
+.advisors-subtitle {
+    max-width: 600px;
+    margin: 12px auto 24px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+.advisors-divider {
+    width: 56px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* --- Advisor Pro Card --- */
+.apc-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 37, 84, 0.07);
+    border: 1px solid rgba(0, 37, 84, 0.06);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
+}
+.apc-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 48px rgba(0, 37, 84, 0.14);
+}
+
+/* Left accent column */
+.apc-left {
+    flex-shrink: 0;
+    width: 110px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 12px 24px;
+    gap: 10px;
+    position: relative;
+}
+.apc-left::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,0.15);
+}
+
+/* Color themes for left column */
+.apc-left.color-navy {
+    background: linear-gradient(160deg, #002554 0%, #003f7f 100%);
+}
+.apc-left.color-gold {
+    background: linear-gradient(160deg, #c47a00 0%, #f5a800 100%);
+}
+.apc-left.color-teal {
+    background: linear-gradient(160deg, #1a6952 0%, #25a07e 100%);
+}
+.apc-left.color-purple {
+    background: linear-gradient(160deg, #5b3199 0%, #8b5cf6 100%);
+}
+
+/* Initials circle */
+.apc-initials {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+}
+
+/* Academic title badge */
+.apc-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+/* Right content */
+.apc-right {
+    flex: 1;
+    padding: 28px 26px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.apc-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+    margin-bottom: 4px;
+}
+.apc-role {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+.apc-desc {
+    font-size: 0.93rem;
+    color: #64748b;
+    line-height: 1.68;
+    margin-bottom: 16px;
+    flex: 1;
+}
+.apc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.apc-tags span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: var(--bg-light);
+    color: var(--text-muted);
+    border: 1px solid rgba(0,37,84,0.1);
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+}
+.apc-card:hover .apc-tags span {
+    background: rgba(0, 37, 84, 0.06);
+    border-color: rgba(0, 37, 84, 0.18);
+    color: var(--primary);
+}
+
+/* Mobile stacked layout */
+@media (max-width: 500px) {
+    .apc-card {
+        flex-direction: column;
+    }
+    .apc-left {
+        width: 100%;
+        min-height: auto;
+        flex-direction: row;
+        padding: 20px 24px;
+        gap: 16px;
+        justify-content: flex-start;
+    }
+    .apc-initials {
+        width: 54px;
+        height: 54px;
+        font-size: 1.1rem;
+    }
+    .apc-badge {
+        font-size: 0.68rem;
+        padding: 4px 10px;
+    }
+    .apc-right {
+        padding: 20px 22px;
+    }
+}
