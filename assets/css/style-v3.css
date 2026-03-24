@@ -181,27 +181,33 @@ TOP INFO BAR
    2. HEADER / NAVBAR
    ====================================================== */
 .header-main {
-    background: rgba(255, 255, 255, 0.);
+    background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(12px);
     box-shadow: 0 2px 20px rgba(0, 40, 100, 0.06);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: all var(--transition);
+    transition: all 0.35s ease, margin-bottom 0.35s ease;
+    margin-bottom: 0;
     border-bottom: 2px solid transparent;
     padding: 12px 0;
-    transition: background .35s ease, box-shadow .35s ease, border-bottom-color .35s ease;
 }
 
 .header-main.scrolled {
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.98);
     border-bottom-color: var(--accent);
     box-shadow: 0 4px 24px rgba(0, 40, 100, 0.12);
+    padding: 6px 0; /* Padding nhỏ khít lại khi scroll */
+    margin-bottom: 57px; /* Bù trừ chính xác 57px hao hụt chiều cao để chống giật trang */
 }
 
 .header-main .navbar-brand img {
     height: 100px;
-    transition: transform .35s ease;
+    transition: height 0.35s ease; /* Hiệu ứng resize tự động */
+}
+
+.header-main.scrolled .navbar-brand img {
+    height: 55px; /* Chiều cao nhỏ vừa khít với chữ nav link */
 }
 
 .navbar-nav {

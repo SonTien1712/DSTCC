@@ -48,6 +48,10 @@
         height: 70px;
     }
 
+    .header-main.scrolled {
+        margin-bottom: 31px !important; /* Bù trừ hao hụt layout trên mobile (70->55px logo, 14->6px padding) */
+    }
+
     /* Hamburger button */
     .navbar-toggler {
         padding: 6px 10px;
