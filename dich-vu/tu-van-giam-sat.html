@@ -5,20 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <!-- ✅ SEO Title & Meta Description -->
-    <title>Tư Vấn Giám Sát Thi Công Cầu Đường | DSTCC</title>
+    <title>Tư Vấn Giám Sát Thi Công Công Trình | DSTCC</title>
     <meta name="description"
-        content="Đội ngũ kỹ sư giàu kinh nghiệm thực chiến trong lĩnh vực tư vấn giám sát giao thông, đảm bảo tiến độ và chất lượng thi công.">
+        content="Dịch vụ tư vấn giám sát thi công cầu đường, dân dụng và công nghiệp. Đảm bảo chất lượng, tiến độ và an toàn lao động với đội ngũ kỹ sư chuyên nghiệp của DSTCC.">
 
     <!-- ✅ Canonical & Keywords -->
     <link rel="canonical" href="https://dstcc.vn/dich-vu/tu-van-giam-sat.html">
-    <meta name="keywords" content="tư vấn giám sát thi công cầu đường, tư vấn thiết kế đà nẵng, thi công giao thông">
+    <meta name="keywords" content="tư vấn giám sát thi công, giám sát xây dựng đà nẵng, giám sát cầu đường, DSTCC">
     <meta name="robots" content="index, follow">
 
     <!-- ✅ Open Graph (Facebook/Zalo) -->
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://dstcc.vn/dich-vu/tu-van-giam-sat.html">
-    <meta property="og:title" content="Tư Vấn Giám Sát Thi Công Cầu Đường | DSTCC">
-    <meta property="og:description" content="Đội ngũ kỹ sư giàu kinh nghiệm thực chiến tư vấn giám sát giao thông tại ĐN.">
+    <meta property="og:title" content="Tư Vấn Giám Sát Thi Công | DSTCC">
+    <meta property="og:description" content="Đảm bảo chất lượng, tiến độ, an toàn cho mọi công trình giao thông và dân dụng tại miền Trung.">
+    
     <!-- ✅ Performance Enhancements -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
@@ -37,25 +38,76 @@
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- CSS: Base → Mobile (load mobile AFTER base) -->
+    <!-- CSS: Base → Mobile -->
     <link href="../assets/css/style-v3.css" rel="stylesheet">
     <link href="../assets/css/style-mobile.css" rel="stylesheet">
 
+    <style>
+        .role-card {
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            height: 100%;
+        }
+        .role-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 63, 127, 0.05) 0%, transparent 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .role-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,63,127,0.1);
+        }
+        .role-card:hover::after {
+            opacity: 1;
+        }
+        .role-icon {
+            font-size: 3rem;
+            color: var(--warning);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        .stat-box:last-child {
+            border-right: none;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: 'Barlow Condensed', sans-serif;
+            color: var(--warning);
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
 
-    <!-- ============================================================
-     TOP INFO BAR
-     ============================================================ -->
+    <!-- TOP INFO BAR -->
     <div class="top-info-bar d-none d-md-block">
         <div class="container">
             <div class="top-info-inner">
                 <div class="top-info-left">
-                    <span><i class="bi bi-telephone-fill"></i> <a href="tel:+84913446353"
-                            class="text-white text-decoration-none">0913 446 353</a></span>
-                    <span><i class="bi bi-envelope-fill"></i> <a href="mailto:DSTCC.JSC@gmail.com"
-                            class="text-white text-decoration-none">DSTCC.JSC@GMAIL.COM</a></span>
+                    <span><i class="bi bi-telephone-fill"></i> <a href="tel:+84913446353" class="text-white text-decoration-none">0913 446 353</a></span>
+                    <span><i class="bi bi-envelope-fill"></i> <a href="mailto:DSTCC.JSC@gmail.com" class="text-white text-decoration-none">DSTCC.JSC@GMAIL.COM</a></span>
                 </div>
                 <div class="top-info-right d-none d-lg-block">
                     <span>Hơn 15 năm kinh nghiệm phân tích & thí nghiệm</span>
@@ -64,116 +116,229 @@
         </div>
     </div>
 
-    <!-- ============================================================
-     HEADER / NAVBAR
-     ============================================================ -->
+    <!-- HEADER / NAVBAR -->
     <nav id="mainNav" class="navbar navbar-expand-lg header-main">
         <div class="container">
             <a class="navbar-brand" href="../">
-                <img src="../image/anhdaidien_png.png" alt="DSTCC Logo"
-                    onerror="this.src='https://placehold.co/160x48/003f7f/ffae00?text=DSTCC'">
+                <img src="../image/anhdaidien_png.png" alt="DSTCC Logo" onerror="this.src='https://placehold.co/160x48/003f7f/ffae00?text=DSTCC'">
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-center gap-1">
                     <li class="nav-item"><a class="nav-link" href="../gioi-thieu/">Giới thiệu</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="../dich-vu/" role="button"
-                            data-bs-toggle="dropdown">Lĩnh vực</a>
+                        <a class="nav-link dropdown-toggle active" href="../dich-vu/" role="button" data-bs-toggle="dropdown">Lĩnh vực</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../dich-vu/">
-                                    <i class="bi bi-buildings me-2 text-warning"></i>Thiết kế & Thi công</a></li>
-                            <li><a class="dropdown-item" href="../dich-vu/thi-nghiem-las-xd.html">
-                                    <i class="bi bi-eyedropper me-2 text-warning"></i>Thí nghiệm & Kiểm định</a></li>
-                            <li><a class="dropdown-item" href="../dich-vu/">
-                                    <i class="bi bi-geo-alt me-2 text-warning"></i>Khảo sát & Lập dự án</a></li>
+                            <li><a class="dropdown-item" href="thiet-ke-thi-cong.html"><i class="bi bi-buildings me-2 text-warning"></i>Thiết kế & Thi công</a></li>
+                            <li><a class="dropdown-item" href="thi-nghiem-las-xd.html"><i class="bi bi-eyedropper me-2 text-warning"></i>Thí nghiệm & Kiểm định</a></li>
+                            <li><a class="dropdown-item active" href="tu-van-giam-sat.html"><i class="bi bi-clipboard2-check me-2 text-warning"></i>Tư vấn Giám sát</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="../du-an/">Dự án</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../tin-tuc/">Tin tức</a></li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-hero-primary text-decoration-none py-2 px-4" href="../#lien-he">
-                            <i class="bi bi-telephone-fill me-1"></i> Liên hệ ngay
-                        </a>
-                    </li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="../tin-tuc/">Tin tức</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="../lien-he/">Liên hệ</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <main style="min-height: 60vh; padding: 100px 0;">
-        <div class="container">
-            <h1 class="section-title">Tư vấn giám sát</h1>
-            <p>Nội dung giới thiệu chi tiết về dịch vụ Tư vấn giám sát đang cập nhật.</p>
+    <!-- INNER HERO BACKGROUND -->
+    <header class="inner-hero" style="background: linear-gradient(rgba(0, 37, 84, 0.8), rgba(0, 37, 84, 0.9)), url('https://placehold.co/1920x600/2c3e50/ffffff?text=Tư+vấn+Giám+sát') center/cover;">
+        <div class="container text-center pt-5 pb-4">
+            <h1 class="text-white fw-bold mb-3" style="font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.05em; font-size: 3.5rem;">TƯ VẤN GIÁM SÁT THI CÔNG</h1>
+            <p class="text-white-50 fs-5 mb-0" style="max-width: 800px; margin: 0 auto;">Bảo chứng cho chất lượng, quy chuẩn an toàn và đúng tiến độ cam kết cho các công trình xây dựng tầm cỡ.</p>
         </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main style="background-color: var(--bg-body); padding-bottom: 80px;">
+        
+        <!-- BREADCRUMB -->
+        <div class="bg-white border-bottom mb-5">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb py-3 mb-0">
+                        <li class="breadcrumb-item"><a href="../"><i class="bi bi-house-door"></i></a></li>
+                        <li class="breadcrumb-item"><a href="../dich-vu/">Dịch vụ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Tư vấn Giám sát</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- INTRODUCTION -->
+        <section class="container mb-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2">
+                    <img src="https://placehold.co/800x600/154360/ffffff?text=Kỹ+sư+giám+sát" alt="Kỹ sư tư vấn giám sát DSTCC" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="section-title mb-4">Mắt xích quan trọng đảm bảo chất lượng công trình</h2>
+                    <p class="text-muted mb-3" style="line-height: 1.8;">
+                        Công tác Tư vấn giám sát đòi hỏi năng lực chuyên môn sâu rộng và đạo đức nghề nghiệp cao. Tại <strong>DSTCC</strong>, chúng tôi thay mặt Chủ đầu tư kiểm soát chặt chẽ quy trình thi công, đảm bảo sản phẩm xây dựng tuân thủ 100% hồ sơ thiết kế, các quy chuẩn kỹ thuật quốc gia và tiêu chuẩn của dự án.
+                    </p>
+                    <p class="text-muted mb-4" style="line-height: 1.8;">
+                        Với lực lượng nòng cốt là các kỹ sư trưởng, kỹ sư tư vấn từ 10 - 25 năm kinh nghiệm thực chiến trên các dự án hạ tầng giao thông (cầu dây văng, đường cao tốc, hầm chui...) tại miền Trung - Tây Nguyên, DSTCC cam kết là "tai mắt" trung thực, khách quan và đáng tin cậy nhất của Chủ đầu tư.
+                    </p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="bg-primary text-white p-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-shield-check fs-3"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1" style="color: var(--primary);">Chứng chỉ hành nghề Hạng 1</h5>
+                            <p class="text-muted small mb-0">Đủ điều kiện giám sát các công trình cấp đặc biệt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="mb-5 py-5" style="background-color: var(--primary);">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-6 col-md-3 stat-box">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Năm chuyên môn</div>
+                    </div>
+                    <div class="col-6 col-md-3 stat-box">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Kỹ sư giám sát trưởng</div>
+                    </div>
+                    <div class="col-6 col-md-3 stat-box">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Dự án nhà nước</div>
+                    </div>
+                    <div class="col-6 col-md-3 stat-box">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Sự cố kỹ thuật</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROLES -->
+        <section class="container mb-5 pt-4">
+            <div class="text-center mb-5">
+                <h3 class="fw-bold" style="font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; color: var(--primary);">PHẠM VI CÔNG VIỆC GIÁM SÁT TẠI DSTCC</h3>
+                <div class="mx-auto mt-3" style="width: 80px; height: 4px; background-color: var(--warning);"></div>
+                <p class="text-muted mt-3 max-w-700 mx-auto">Kiểm soát toàn diện 4 trụ cột quan trọng nhất của mọi công trình xây dựng.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Quality -->
+                <div class="col-md-6">
+                    <div class="role-card">
+                        <i class="bi bi-patch-check role-icon"></i>
+                        <h4 class="fw-bold h5 mb-3" style="color: var(--primary);">Giám sát Chất lượng</h4>
+                        <ul class="text-muted small ps-3 mb-0" style="line-height: 1.8;">
+                            <li>Kiểm tra tính hợp lệ của năng lực nhà thầu, chứng chỉ vật liệu, thiết bị tại hiện trường.</li>
+                            <li>Nghiệm thu trực tiếp từng công đoạn thi công, cốt thép, cốp pha trước khi đổ bê tông.</li>
+                            <li>Tổ chức lấy mẫu thí nghiệm độc lập (song song với nhà thầu) tại PTN LAS-XD 15.021 nội bộ của DSTCC để đối chứng.</li>
+                            <li>Đưa ra giải pháp khắc phục ngay lập tức nếu phát hiện sai lệch tiêu chuẩn.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Schedule -->
+                <div class="col-md-6">
+                    <div class="role-card">
+                        <i class="bi bi-clock-history role-icon"></i>
+                        <h4 class="fw-bold h5 mb-3" style="color: var(--primary);">Giám sát Tiến độ</h4>
+                        <ul class="text-muted small ps-3 mb-0" style="line-height: 1.8;">
+                            <li>Kiểm tra và phê duyệt bản tiến độ thi công tổng thể, chi tiết do nhà thầu đệ trình.</li>
+                            <li>Theo dõi nhân lực, thiết bị hiện trường có đáp ứng đúng báo cáo thi công hay không.</li>
+                            <li>Lập báo cáo tuần, tháng gửi Chủ đầu tư và cảnh báo sớm nguy cơ chậm tiến độ.</li>
+                            <li>Đề xuất các biện pháp đốc thúc, bù tiến độ khoa học khi cần thiết.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Cost -->
+                <div class="col-md-6">
+                    <div class="role-card">
+                        <i class="bi bi-safe role-icon"></i>
+                        <h4 class="fw-bold h5 mb-3" style="color: var(--primary);">Quản lý Khối lượng & Chi phí</h4>
+                        <ul class="text-muted small ps-3 mb-0" style="line-height: 1.8;">
+                            <li>Nghiệm thu và xác nhận bản vẽ hoàn công đúng thực tế thi công.</li>
+                            <li>Chốt khối lượng thanh toán từng giai đoạn, tránh thất thoát, lãng phí ngân sách của Chủ đầu tư.</li>
+                            <li>Thẩm định chặt chẽ các khối lượng phát sinh (nếu có) ngoài thiết kế cơ sở.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- HSE -->
+                <div class="col-md-6">
+                    <div class="role-card">
+                        <i class="bi bi-heart-pulse role-icon"></i>
+                        <h4 class="fw-bold h5 mb-3" style="color: var(--primary);">An toàn Lao động & Môi trường (HSE)</h4>
+                        <ul class="text-muted small ps-3 mb-0" style="line-height: 1.8;">
+                            <li>Giám sát tuân thủ nghiêm ngặt nội quy bảo hộ lao động trên công trường.</li>
+                            <li>Kiểm tra giấy phép vận hành thiết bị nặng (cẩu tháp, vận thăng, khoan nhồi).</li>
+                            <li>Đánh giá rủi ro và ngăn chặn các hành vi thi công gây mất an toàn hoặc ô nhiễm môi trường.</li>
+                            <li>Có quyền đình chỉ thi công nếu phát hiện lỗi vi phạm cực kỳ nghiêm trọng về ATLĐ.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CALL TO ACTION -->
+        <!-- <section class="container">
+            <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-primary border-opacity-10 d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <div class="mb-4 mb-md-0 me-md-4">
+                    <h3 class="fw-bold mb-2" style="color: var(--primary);">Ủy thác sự an tâm cho chuyên gia DSTCC</h3>
+                    <p class="text-muted mb-0">Hồ sơ năng lực của chúng tôi đáp ứng đầy đủ yêu cầu đấu thầu quốc gia.</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="../#lien-he" class="btn btn-primary fw-bold rounded-pill px-4 py-3 shadow-sm d-inline-flex align-items-center gap-2">
+                        Yêu cầu Tư vấn & Báo giá <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section> -->
+
     </main>
 
-    <!-- ============================================================
-     FOOTER
-     ============================================================ -->
+    <!-- FOOTER -->
     <footer class="footer-main">
         <div class="container">
             <div class="row g-4 g-lg-5">
                 <div class="col-lg-4 col-12">
                     <div class="footer-brand">
-                        <img src="../image/anhdaidien_png.png" alt="DSTCC"
-                            onerror="this.src='https://placehold.co/140x44/ffffff/003f7f?text=DSTCC'">
+                        <img src="../image/anhdaidien_png.png" alt="DSTCC" onerror="this.src='https://placehold.co/140x44/ffffff/003f7f?text=DSTCC'">
                     </div>
-                    <p class="small mt-3 mb-3" style="line-height:1.6;">
-                        Công ty CP Khoa học Công nghệ &amp; Tư vấn Xây dựng Đà Nẵng — Đối tác tin cậy cho mọi công trình
-                        giao thông.
-                    </p>
-                    <p class="mb-1"><i class="bi bi-geo-alt me-2 text-warning"></i>Số 10 Xuân Thiều 25, P.Hải Vân, TP.Đà
-                        Nẵng</p>
-                    <p class="mb-1"><i class="bi bi-telephone me-2 text-warning"></i>
-                        <a href="tel:+84913446353">(+84) 913 446 353</a>
-                    </p>
-                    <p class="mb-1"><i class="bi bi-envelope me-2 text-warning"></i>
-                        <a href="mailto:DSTCC.JSC@gmail.com">DSTCC.JSC@gmail.com</a>
-                    </p>
+                    <p class="small mt-3 mb-3" style="line-height:1.6;">Công ty CP Khoa học Công nghệ & Tư vấn Xây dựng Đà Nẵng — Đối tác tin cậy cho mọi công trình.</p>
+                    <p class="mb-1"><i class="bi bi-geo-alt me-2 text-warning"></i>Số 10 Xuân Thiều 25, P.Hải Vân, TP.Đà Nẵng</p>
+                    <p class="mb-1"><i class="bi bi-telephone me-2 text-warning"></i><a href="tel:+84913446353">(+84) 913 446 353</a></p>
+                    <p class="mb-1"><i class="bi bi-envelope me-2 text-warning"></i><a href="mailto:DSTCC.JSC@gmail.com">DSTCC.JSC@gmail.com</a></p>
                 </div>
                 <div class="col-lg-2 col-6">
                     <h5>Dịch vụ</h5>
                     <ul class="list-unstyled">
-                        <li><a href="../dich-vu/"><i class="bi bi-chevron-right me-1 text-warning small"></i>Thiết kế
-                                &amp; Thi công</a></li>
-                        <li><a href="../dich-vu/thi-nghiem-las-xd.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Thí
-                                nghiệm LAS-XD</a></li>
-                        <li><a href="../dich-vu/tu-van-giam-sat.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Tư vấn giám
-                                sát</a></li>
+                        <li><a href="../dich-vu/thiet-ke-thi-cong.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Thiết kế & Thi công</a></li>
+                        <li><a href="../dich-vu/thi-nghiem-las-xd.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Thí nghiệm LAS-XD</a></li>
+                        <li><a href="../dich-vu/tu-van-giam-sat.html"><i class="bi bi-chevron-right me-1 text-warning small"></i>Tư vấn giám sát</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-6">
                     <h5>Điều hướng</h5>
                     <ul class="list-unstyled">
-                        <li><a href="../gioi-thieu/"><i class="bi bi-chevron-right me-1 text-warning small"></i>Giới
-                                thiệu</a></li>
+                        <li><a href="../gioi-thieu/"><i class="bi bi-chevron-right me-1 text-warning small"></i>Giới thiệu</a></li>
                         <li><a href="../du-an/"><i class="bi bi-chevron-right me-1 text-warning small"></i>Dự án</a></li>
-                        <li><a href="../tin-tuc/"><i class="bi bi-chevron-right me-1 text-warning small"></i>Tin tức</a>
-                        </li>
-                        <li><a href="../#lien-he"><i class="bi bi-chevron-right me-1 text-warning small"></i>Liên hệ</a>
-                        </li>
+                        <!-- <li><a href="../tin-tuc/"><i class="bi bi-chevron-right me-1 text-warning small"></i>Tin tức</a></li> -->
+                        <li><a href="../#lien-he"><i class="bi bi-chevron-right me-1 text-warning small"></i>Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
-
             <hr class="footer-divider">
             <div class="d-flex flex-wrap justify-content-between align-items-center footer-bottom">
-                <span>© 2026 DSTCC. All rights reserved. — MST: 0401770xxx</span>
-                <span>Designed &amp; Developed by DSTCC Tech Team</span>
+                <span>© 2026 DSTCC. All rights reserved.</span>
+                <span>Designed by DSTCC Tech Team</span>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script>
         const navbar = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {
@@ -182,4 +347,3 @@
     </script>
 </body>
 </html>
-
