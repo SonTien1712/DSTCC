@@ -144,7 +144,7 @@
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()) || 'Email không hợp lệ.';
             },
             phone: function (val) {
-                return /^(0|\+84)[0-9]{9,10}$/.test(val.replace(/\s/g, '')) || 'Số điện thoại không hợp lệ (VD: 0913446353).';
+                return /^(0|\+84)[0-9]{9,10}$/.test(val.replace(/\s/g, '')) || 'Số điện thoại không hợp lệ (VD: 0388279279).';
             },
             minlength: function (val, param) {
                 return val.trim().length >= parseInt(param, 10)
@@ -272,7 +272,7 @@
                 }
             })
             .catch(function () {
-                showFormSuccess(form, 'Có lỗi khi gửi. Vui lòng gọi trực tiếp: 0913 446 353.', true);
+                showFormSuccess(form, 'Có lỗi khi gửi. Vui lòng gọi trực tiếp: 0388.279.279.', true);
             })
             .finally(function () {
                 if (btn) {
