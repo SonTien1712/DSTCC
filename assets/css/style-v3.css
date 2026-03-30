@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    DSTCC Website v2 — Enhanced Premium CSS
    Aesthetic: Industrial-Refined | Authority Blue × Amber Gold
    ========================================================= */
@@ -3297,6 +3297,14 @@ img {
                 url('../image/themes_img_3.webp') center/cover no-repeat;
 }
 
+/* ── #gioi-thieu ── themes_img_3 city/dawn ──────────── */
+#gioi-thieu { position: relative; overflow: hidden; isolation: isolate; }
+#gioi-thieu::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -1;
+    background: linear-gradient(135deg,rgba(240,244,250,0.80) 0%,rgba(238,241,245,0.76) 100%),
+                url('../image/themes_img_3.webp') center/cover no-repeat;
+}
+
 /* ── #phong-thi-nghiem ── themes_img_2 construction ────── */
 #phong-thi-nghiem { position: relative; overflow: hidden; isolation: isolate; }
 #phong-thi-nghiem::before {
@@ -3353,12 +3361,12 @@ main > section.bg-white::before {
 }
 
 /*  #trust-bar  themes_img_2 texture  */
-#trust-bar { position: relative; overflow: hidden; isolation: isolate; }
+/* #trust-bar { position: relative; overflow: hidden; isolation: isolate; }
 #trust-bar::before {
     content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -1;
     background: linear-gradient(90deg,rgba(0,37,84,0.96) 0%,rgba(0,37,84,0.90) 100%),
                 url('../image/themes_img_2.webp') center/cover no-repeat;
-}
+} */
 
 /*  Subpage main sections  themes_img_1  */
 main > section.section-pad, main > .section-pad {

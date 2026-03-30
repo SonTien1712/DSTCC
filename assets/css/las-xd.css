@@ -15,8 +15,8 @@
 
 /* ---- HERO ---- */
 .lab-hero {
-    background: linear-gradient(155deg, rgba(0,37,84,.88) 0%, rgba(0,63,127,.75) 60%, rgba(0,20,50,.92) 100%),
-                url('https://placehold.co/1600x700/001a40/ffffff?text=Phòng+Thí+Nghiệm+LAS-XD') center/cover no-repeat;
+    background: linear-gradient(155deg, rgba(0,37,84,.85) 0%, rgba(0,63,127,.75) 60%, rgba(0,20,50,.9) 100%),
+                url('../assets/image/themes_img_1.webp') center/cover no-repeat;
     padding: 140px 0 80px;
     position: relative;
     overflow: hidden;
@@ -91,10 +91,14 @@
 }
 
 /* ---- WOW FACTOR — SPECIALIZED EQUIPMENT ---- */
-.wow-section { background:var(--primary-dark);padding:80px 0; }
+.wow-section { 
+    background: linear-gradient(rgba(0,26,64,0.92), rgba(0,26,64,0.92)),
+                url('../assets/image/themes_img_2.webp') center/cover no-repeat fixed;
+    padding: 80px 0; 
+}
 .wow-section .section-title { color:#fff; }
 .wow-section .section-title::after { background:var(--accent); }
-.wow-section .sub { color:rgba(255,255,255,.7);font-size:1rem;max-width:560px;line-height:1.7; }
+.wow-section .sub { color:rgba(255,255,255,.8);font-size:1rem;max-width:600px;line-height:1.7; }
 
 .wow-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:40px; }
 @media(max-width:991px){ .wow-grid{ grid-template-columns:1fr 1fr; } }
@@ -210,7 +214,11 @@
 #noResults i { font-size:2.5rem;opacity:.3;display:block;margin-bottom:12px; }
 
 /* ---- CTA STRIP ---- */
-.cta-strip { background:linear-gradient(135deg,var(--accent) 0%,#c78500 100%); padding:60px 0; }
+.cta-strip { 
+    background: linear-gradient(135deg, rgba(245,168,0,0.95) 0%, rgba(199,133,0,0.95) 100%),
+                url('../assets/image/themes_img_4.webp') center/cover no-repeat;
+    padding: 60px 0; 
+}
 .cta-strip h2 {
     font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);
     font-weight:800;color:var(--primary-dark);letter-spacing:.04em;margin-bottom:8px;
@@ -234,7 +242,11 @@
 .btn-cta-outline-dark:hover { background:var(--primary-dark);color:#fff; }
 
 /* ---- PROCESS ---- */
-.process-section { background:var(--white);padding:80px 0; }
+.process-section { 
+    background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+                url('../assets/image/themes_img_3.webp') center/cover no-repeat;
+    padding: 80px 0; 
+}
 .process-steps { display:grid;grid-template-columns:repeat(4,1fr);gap:0; }
 @media(max-width:767px){ .process-steps{ grid-template-columns:1fr 1fr;gap:24px; } }
 @media(max-width:480px){ .process-steps{ grid-template-columns:1fr; } }

@@ -1,0 +1,405 @@
+/* ============================================================
+   DSTCC — components.css
+   Reusable UI Components: Buttons, Cards, Forms, Badges, Swiper
+   ============================================================ */
+
+/* ============================================================
+   1. BUTTONS
+   ============================================================ */
+.btn-hero-primary {
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 34px;
+  border-radius: 4px;
+  border: none;
+  transition: all var(--transition);
+  box-shadow: 0 6px 20px rgba(245, 168, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.btn-hero-primary:hover {
+  background: #fff;
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(245, 168, 0, 0.35);
+}
+.btn-hero-outline {
+  background: transparent;
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 34px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-hero-outline:hover { border-color: #fff; background: rgba(255, 255, 255, 0.12); }
+
+.btn-submit-b2b {
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(245, 168, 0, 0.35);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-submit-b2b:hover {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 10px 28px rgba(0, 63, 127, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   2. SERVICE CARDS
+   ============================================================ */
+.service-intro { color: var(--white); padding: 30px 40px; }
+.service-intro h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.service-scroller {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 20px 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.service-scroller::-webkit-scrollbar { display: none; }
+.service-card {
+  flex: 0 0 290px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-md); }
+.service-card img { width: 100%; height: 190px; object-fit: cover; }
+.service-card-body {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 3px solid var(--bg-light);
+}
+.service-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+}
+@media (min-width: 992px) {
+  .service-scroller {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    overflow: visible;
+    padding: 0;
+  }
+  .service-card { flex: none; }
+}
+
+/* ============================================================
+   3. PROJECT CARDS
+   ============================================================ */
+.project-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 340px;
+  cursor: pointer;
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,25,60,0.88) 0%, rgba(0,40,100,0.2) 55%, transparent 100%);
+  z-index: 1;
+  transition: opacity var(--transition);
+}
+.project-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.project-card:hover img { transform: scale(1.07); }
+.project-info {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 2;
+  padding: 20px 22px;
+}
+.project-cat {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(245, 168, 0, 0.15);
+  border: 1px solid rgba(245, 168, 0, 0.4);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+.project-info h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+.project-meta {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.project-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 30px; }
+.filter-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+.filter-btn.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+#projects-loader {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; padding: 40px;
+  color: var(--text-muted); font-size: 0.9rem;
+}
+
+/* ============================================================
+   4. NEWS CARDS
+   ============================================================ */
+.classic-card {
+  border: none;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--white);
+  transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
+}
+.classic-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.classic-card > img { width: 100%; height: 220px; object-fit: cover; }
+.classic-card-body { padding: 22px; }
+.classic-card-date { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+.classic-card-title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--primary); line-height: 1.45; margin-bottom: 10px; }
+.read-more { font-size: 0.82rem; font-weight: 600; color: var(--accent-dark); display: flex; align-items: center; gap: 5px; }
+.read-more i { transition: transform var(--transition); }
+.classic-card:hover .read-more i { transform: translateX(4px); }
+
+/* ============================================================
+   5. ABOUT SECTION
+   ============================================================ */
+.about-img-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+.about-img-wrap img { width: 100%; height: 420px; object-fit: cover; }
+.about-img-badge {
+  position: absolute; bottom: 24px; left: 24px;
+  background: var(--accent); color: var(--primary-dark);
+  padding: 14px 22px; border-radius: var(--radius);
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.about-img-badge .num { font-size: 2.4rem; font-weight: 800; line-height: 1; display: block; }
+.about-img-badge .lbl { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.about-check li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.97rem; }
+.about-check li i { color: var(--accent); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+
+/* ============================================================
+   6. LAB TABS
+   ============================================================ */
+.lab-section { background: var(--white); }
+.lab-tabs .nav-tabs { border: none; gap: 6px; flex-wrap: wrap; margin-bottom: 30px; }
+.lab-tabs .nav-link {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: 0.92rem !important; font-weight: 700 !important;
+  letter-spacing: 0.06em !important; text-transform: uppercase !important;
+  padding: 10px 22px !important; border: 1px solid var(--border) !important;
+  border-radius: 4px !important; color: var(--text-muted) !important;
+  background: var(--bg-light); transition: all var(--transition);
+}
+.lab-tabs .nav-link::after { display: none !important; }
+.lab-tabs .nav-link:hover { border-color: var(--primary) !important; color: var(--primary) !important; background: var(--white); }
+.lab-tabs .nav-link.active { background: var(--primary) !important; border-color: var(--primary) !important; color: var(--white) !important; }
+.equipment-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.equipment-item {
+  background: var(--bg-light); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 20px;
+  display: flex; align-items: flex-start; gap: 14px; transition: all var(--transition);
+}
+.equipment-item:hover { background: var(--white); border-color: var(--primary); box-shadow: var(--shadow-sm); transform: translateX(4px); }
+.equipment-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 1.1rem; flex-shrink: 0;
+}
+.equipment-name { font-size: 0.9rem; font-weight: 600; color: var(--text-main); line-height: 1.4; }
+.equipment-spec  { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
+
+/* ============================================================
+   7. ADVISOR / SWIPER CARDS
+   ============================================================ */
+.advisors-section { background: var(--bg-section); }
+.advisor-swiper { padding-bottom: 50px !important; overflow: visible !important; }
+.advisor-card {
+  background: var(--white); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-sm); height: 100%;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.advisor-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.advisor-card-top {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 28px 24px 20px; text-align: center; position: relative;
+}
+.advisor-card-top::after {
+  content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
+  height: 30px; background: var(--white); clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+.advisor-avatar {
+  width: 80px; height: 80px; border-radius: 8px; background: var(--accent);
+  margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800;
+  color: var(--primary-dark); border: 4px solid rgba(255, 255, 255, 0.25);
+}
+.advisor-card-body { padding: 20px 22px 24px; }
+.advisor-rank {
+  display: inline-block; background: var(--accent); color: var(--primary-dark);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 12px;
+  border-radius: 20px; margin-bottom: 8px;
+}
+.advisor-name { font-weight: 600; font-size: 1.1rem; color: var(--primary); margin-bottom: 6px; }
+.advisor-specialty { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+.swiper-pagination-bullet { background: var(--primary) !important; }
+.swiper-pagination-bullet-active { background: var(--accent) !important; transform: scale(1.3); }
+
+/* ============================================================
+   8. CONTACT FORM
+   ============================================================ */
+.contact-card { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); overflow: hidden; }
+.contact-sidebar {
+  background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 48px 36px; color: rgba(255,255,255,0.85); position: relative; overflow: hidden;
+}
+.contact-sidebar::before {
+  content: ''; position: absolute; top: -60px; right: -60px;
+  width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.04);
+}
+.contact-sidebar h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 800;
+  color: var(--white); margin-bottom: 8px; letter-spacing: 0.04em;
+}
+.contact-sidebar .subtitle { font-size: 0.9rem; opacity: 0.7; margin-bottom: 32px; line-height: 1.5; }
+.contact-info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 22px; }
+.contact-info-icon {
+  width: 38px; height: 38px; background: rgba(245,168,0,0.15);
+  border: 1px solid rgba(245,168,0,0.35); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 1rem; flex-shrink: 0;
+}
+.contact-info-item strong { display: block; color: var(--white); font-size: 0.85rem; margin-bottom: 2px; }
+.contact-info-item span  { font-size: 0.88rem; opacity: 0.75; line-height: 1.4; }
+.form-area { padding: 40px 36px; }
+.form-area h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem;
+  font-weight: 800; color: var(--primary); margin-bottom: 4px;
+}
+.form-area .form-subtitle { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 28px; }
+.form-label { font-size: 0.85rem; font-weight: 600; color: var(--text-main); margin-bottom: 6px; }
+.form-control, .form-select {
+  border: 1.5px solid var(--border); border-radius: var(--radius);
+  padding: 11px 14px; font-size: 0.92rem; font-family: 'Inter', sans-serif;
+  transition: all var(--transition); background: var(--bg-light);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary); background: var(--white);
+  box-shadow: 0 0 0 3px rgba(0,63,127,0.1); outline: none;
+}
+.file-upload-wrapper {
+  position: relative; border: 2px dashed rgba(0,63,127,0.4);
+  border-radius: var(--radius); background: #fff; text-align: center;
+  padding: 30px 20px; cursor: pointer; transition: all var(--transition);
+}
+.file-upload-wrapper:hover { border-color: var(--accent); background: rgba(245,168,0,0.05); }
+.file-upload-wrapper input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+.file-upload-text { font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; line-height: 1.4; }
+.file-upload-text strong { color: var(--primary); }
+#file-name-display { font-size: 0.82rem; color: var(--accent-dark); margin-top: 8px; display: none; }
+.form-success { display: none; text-align: center; padding: 40px 20px; }
+.form-success i { font-size: 3rem; color: #28a745; margin-bottom: 16px; }
+.form-success h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; color: var(--primary); }
+
+/* ============================================================
+   9. LEADER / STAFF CARDS (Swiper)
+   ============================================================ */
+.leader-slider-container { padding: 20px 15px 70px; margin: 0 -15px; overflow: hidden; }
+.leader-card {
+  background: var(--white); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,37,84,0.05);
+  overflow: hidden; height: 100%; display: flex; flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.25,0.8,0.25,1); border: 1px solid rgba(0,37,84,0.04);
+}
+.leader-card:hover { transform: translateY(-8px); box-shadow: 0 16px 36px rgba(0,37,84,0.12); }
+.leader-visual { height: 190px; position: relative; background: linear-gradient(135deg, #eef1f5, #e2e8f0); }
+.leader-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.leader-fallback { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); }
+.leader-fallback.color-navy  { background: linear-gradient(160deg, #002554 0%, #003f7f 100%); }
+.leader-fallback.color-gold  { background: linear-gradient(160deg, #c47a00 0%, #f5a800 100%); }
+.leader-fallback.color-teal  { background: linear-gradient(160deg, #1a6952 0%, #25a07e 100%); }
+.leader-fallback.color-purple{ background: linear-gradient(160deg, #5b3199 0%, #8b5cf6 100%); }
+.leader-initials { font-size: 3rem; font-weight: 800; font-family: 'Barlow Condensed', sans-serif; line-height: 1; }
+.leader-badge { margin-top: 12px; background: rgba(255,255,255,0.2); padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.25); }
+.leader-content { padding: 24px 26px; flex-grow: 1; display: flex; flex-direction: column; }
+.leader-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 6px; }
+.leader-role { font-size: 0.95rem; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+.leader-desc { font-size: 0.95rem; color: #64748b; line-height: 1.6; margin-bottom: 24px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.leader-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.leader-tags span { background: var(--bg-light); color: var(--text-muted); font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; font-weight: 600; border: 1px solid rgba(0,37,84,0.08); transition: all 0.2s ease; }
+.leader-card:hover .leader-tags span { background: rgba(0,37,84,0.05); border-color: rgba(0,37,84,0.15); color: var(--primary); }
+.leader-slider-container .swiper-button-next,
+.leader-slider-container .swiper-button-prev { color: var(--primary); background: var(--white); width: 44px; height: 44px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); top: 40%; transition: all 0.3s ease; }
+.leader-slider-container .swiper-button-next:hover,
+.leader-slider-container .swiper-button-prev:hover { background: var(--primary); color: var(--white); }
+.leader-slider-container .swiper-button-next::after,
+.leader-slider-container .swiper-button-prev::after { font-size: 1.2rem; font-weight: 800; }

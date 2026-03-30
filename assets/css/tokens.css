@@ -1,0 +1,96 @@
+/* ============================================================
+   DSTCC — tokens.css
+   Design Tokens: Variables, Reset, Base Typography
+   ============================================================ */
+
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  /* Brand Colors */
+  --primary:        #003f7f;
+  --primary-dark:   #002554;
+  --accent:         #f5a800;
+  --accent-dark:    #c78500;
+
+  /* Text */
+  --text-main:      #1e2a38;
+  --text-muted:     #5a6878;
+
+  /* Backgrounds */
+  --white:          #ffffff;
+  --bg-light:       #f4f6f9;
+  --bg-section:     #eef1f5;
+
+  /* Borders & Shadows */
+  --border:         rgba(0, 63, 127, 0.10);
+  --shadow-sm:      0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md:      0 8px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg:      0 16px 40px rgba(0, 37, 84, 0.14);
+
+  /* Radii */
+  --radius:         10px;
+  --radius-lg:      16px;
+
+  /* Transitions */
+  --transition:     0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---- Box-sizing Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  background: var(--bg-light);
+  overflow-x: hidden;
+  margin: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---- Utility: Section Padding ---- */
+.section-pad {
+  padding: 90px 0;
+}
+
+/* ---- Utility: Scroll Reveal ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Utility: Realistic image ---- */
+.realistic-img {
+  filter: contrast(0.95) saturate(0.9);
+}

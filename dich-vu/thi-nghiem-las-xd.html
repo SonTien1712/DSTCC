@@ -59,8 +59,12 @@
         rel="stylesheet">
 
     <!-- CSS chung -->
-    <link href="../assets/css/style-v3.css" rel="stylesheet">
-    <link href="../assets/css/style-mobile.css" rel="stylesheet">
+    <link href="../assets/css/tokens.css" rel="stylesheet">
+<link href="../assets/css/layout.css" rel="stylesheet">
+<link href="../assets/css/components.css" rel="stylesheet">
+<link href="../assets/css/sections.css" rel="stylesheet">
+<link href="../assets/css/mobile.css" rel="stylesheet">
+<link href="../assets/css/about.css" rel="stylesheet">
 
     <!-- CSS riÃªng cho trang LAS-XD -->
     <link href="../assets/css/las-xd.css" rel="stylesheet">
@@ -147,7 +151,7 @@
             <h1>Phòng Thí Nghiệm<br><span>LAS-XD 15.021</span><br>Kiểm định Công trình Giao thông</h1>
 
             <p class="lab-hero-desc mt-3">
-                Đạt tiêu chuẩn <strong style="color:var(--accent);">Bộ GTVT</strong> cấp phép, phòng thí nghiệm DSTCC
+                Đạt tiêu chuẩn <strong style="color:var(--accent);"></strong> cấp phép, phòng thí nghiệm DSTCC
                 thực hiện
                 35+ nhóm phép thử theo TCVN, ASTM, AASHTO — từ bê tông, nhựa đường đến hằn lún vệt bánh xe, gối cầu chịu
                 tải 600+ tấn
@@ -271,7 +275,7 @@
             </div>
 
             <!-- CTA dưới wow section -->
-            <div class="text-center mt-5 reveal">
+            <!-- <div class="text-center mt-5 reveal">
                 <a href="../lien-he/index.html" class="btn-hero-primary"
                     style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
                     <i class="bi bi-send-fill"></i> Yêu cầu báo giá kiểm định chuyên sâu
@@ -280,13 +284,13 @@
                     Phản hồi trong 24 giờ làm việc · Miễn phí tư vấn kỹ thuật ban đầu
                 </span>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- ============================================================
      SEARCH BAR (Sticky)
      ============================================================ -->
-    <div class="search-section" id="lab-search-bar">
+    <!-- <div class="search-section" id="lab-search-bar">
         <div class="container">
             <div class="row align-items-center g-3">
                 <div class="col-lg-6">
@@ -309,12 +313,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- ============================================================
      TEST CATEGORIES GRID
      ============================================================ -->
-    <section class="lab-grid-section" id="lab-categories" aria-label="Danh mục phép thử LAS-XD">
+    <!-- <section class="lab-grid-section" id="lab-categories" aria-label="Danh mục phép thử LAS-XD">
         <div class="container">
             <div class="row mb-4 mb-lg-5 reveal">
                 <div class="col-lg-7">
@@ -330,7 +334,7 @@
 
             <div class="lab-grid" id="testGrid">
 
-                <!-- ===== 1. BÊ TÔNG ===== -->
+                
                 <article class="test-card reveal" data-tags="bê tông cầu đường cao tốc kết cấu">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-bricks"></i></div>
@@ -381,7 +385,7 @@
                     </div>
                 </article>
 
-                <!-- ===== 2. NHỰA ĐƯỜNG ===== -->
+                
                 <article class="test-card reveal" data-tags="nhựa đường đường cao tốc mặt đường">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-droplet-fill"></i></div>
@@ -432,7 +436,7 @@
                     </div>
                 </article>
 
-                <!-- ===== 3. CỐT LIỆU ===== -->
+                
                 <article class="test-card reveal" data-tags="cốt liệu đất nền đường cao tốc vật liệu">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-clipboard-data"></i></div>
@@ -475,7 +479,7 @@
                     </div>
                 </article>
 
-                <!-- ===== 4. ĐẤT & NỀN ĐƯỜNG ===== -->
+                
                 <article class="test-card reveal" data-tags="đất nền đường cao tốc địa chất nền móng">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-layers-fill"></i></div>
@@ -525,7 +529,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 5. THÉP & KIM LOẠI ===== -->
                 <article class="test-card reveal" data-tags="thép cầu kết cấu kim loại cốt thép">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-grid-3x3-gap"></i></div>
@@ -567,7 +570,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 6. CÁP DỰ ỨNG LỰC ===== -->
                 <article class="test-card reveal" data-tags="cáp dự ứng lực cầu kết cấu đặc biệt">
                     <div class="test-card-header">
                         <div class="test-card-icon" style="background:linear-gradient(135deg,#c78500,#8a5c00);"><i
@@ -609,7 +611,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 7. GỐI CẦU ===== -->
                 <article class="test-card reveal" data-tags="gối cầu cầu kết cấu đặc biệt">
                     <div class="test-card-header">
                         <div class="test-card-icon" style="background:linear-gradient(135deg,#c78500,#8a5c00);"><i
@@ -645,7 +646,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 8. HIỆN TRƯỜNG ===== -->
                 <article class="test-card reveal" data-tags="hiện trường đường cầu đường cao tốc kiểm tra thực địa">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-geo-fill"></i></div>
@@ -696,7 +696,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 9. VỮA XÂY DỰNG ===== -->
                 <article class="test-card reveal" data-tags="vữa xây dựng bê tông xi măng">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-activity"></i></div>
@@ -730,7 +729,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 10. PHÒNG THÍ NGHIỆM CỌC KHOAN NHỒI ===== -->
                 <article class="test-card reveal" data-tags="cọc khoan nhồi nền móng cầu siêu âm">
                     <div class="test-card-header">
                         <div class="test-card-icon" style="background:linear-gradient(135deg,#c78500,#8a5c00);"><i
@@ -774,7 +772,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 11. LỚP MÓNG ĐẤT GIA CỐ ===== -->
                 <article class="test-card reveal" data-tags="đất gia cố xi măng vôi nền đường">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-cone-striped"></i></div>
@@ -808,7 +805,6 @@
                     </div>
                 </article>
 
-                <!-- ===== 12. KHẢO SÁT ĐỊA CHẤT ===== -->
                 <article class="test-card reveal" data-tags="địa chất khảo sát nền móng">
                     <div class="test-card-header">
                         <div class="test-card-icon"><i class="bi bi-globe"></i></div>
@@ -851,9 +847,8 @@
                     </div>
                 </article>
 
-            </div><!-- /.lab-grid -->
+            </div>
 
-            <!-- No results message -->
             <div id="noResults">
                 <i class="bi bi-search"></i>
                 <p>Không tìm thấy phép thử phù hợp. Hãy thử từ khóa khác hoặc liên hệ để được tư vấn trực tiếp.</p>
@@ -863,8 +858,7 @@
                 </a>
             </div>
 
-            <!-- DOWNLOAD CTA -->
-            <!-- <div class="download-banner reveal" role="complementary" aria-label="Tải hồ sơ năng lực">
+            <div class="download-banner reveal" role="complementary" aria-label="Tải hồ sơ năng lực">
                 <div class="download-banner-icon" aria-hidden="true"><i class="bi bi-file-earmark-pdf-fill"></i></div>
                 <div class="download-banner-text">
                     <h4>Hồ sơ Năng lực Phòng Thí Nghiệm LAS-XD 15.021</h4>
@@ -873,9 +867,9 @@
                 <button type="button" class="btn-download" data-bs-toggle="modal" data-bs-target="#downloadModal">
                     <i class="bi bi-download"></i> Táº£i há»“ sÆ¡ nÄƒng lá»±c
                 </button>
-            </div> -->
+            </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- ============================================================
      QUY TRÌNH KIỂM ĐỊNH
