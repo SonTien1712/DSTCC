@@ -47,6 +47,10 @@
     <link href="../assets/css/mobile.css" rel="stylesheet">
     <link href="../assets/css/about.css" rel="stylesheet">
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVPLCVM7M8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MVPLCVM7M8');</script>
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
@@ -599,6 +603,25 @@
             counterObserver.observe(overviewSection);
         }
     </script>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-bottom-nav" id="mobileBottomNav">
+        <div class="mobile-bottom-nav-inner">
+            <a href="../" class="mobile-nav-item active"><i class="bi bi-house-fill"></i><span>Trang chủ</span></a>
+            <a href="../dich-vu/" class="mobile-nav-item"><i class="bi bi-tools"></i><span>Dịch vụ</span></a>
+            <a href="tel:+84388279279" class="mobile-nav-item cta-call"><div class="mobile-nav-cta-btn"><i class="bi bi-telephone-fill"></i></div><span>Gọi ngay</span></a>
+            <a href="../du-an/" class="mobile-nav-item"><i class="bi bi-grid-3x3-gap-fill"></i><span>Dự án</span></a>
+            <a href="../lien-he/" class="mobile-nav-item"><i class="bi bi-chat-dots-fill"></i><span>Liên hệ</span></a>
+        </div>
+    </div>
+
+    <!-- Facebook Messenger -->
+    <script>
+        var chatbox=document.createElement('div');chatbox.id='fb-customer-chat';chatbox.className='fb-customerchat';chatbox.setAttribute('page_id','106618588452865');chatbox.setAttribute('attribution','biz_inbox');document.body.appendChild(chatbox);
+        window.fbAsyncInit=function(){FB.init({xfbml:true,version:'v12.0'});};
+        (function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+    </script>
+    <script src="../js/enhancements.js"></script>
 </body>
 
 </html>

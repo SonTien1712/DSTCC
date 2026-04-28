@@ -30,11 +30,11 @@
       "name": "DSTCC – Phòng Thí Nghiệm LAS-XD 15.021",
       "description": "Phòng thí nghiệm xây dựng đạt tiêu chuẩn LAS-XD 15.021, ISO 9001:2015. Kiểm định bê tông, nhựa đường, thép, gối cầu, cáp dự ứng lực, hằn lún vệt bánh xe.",
       "url": "https://dstcc.com.vn/dich-vu/thi-nghiem-las-xd.html",
-      "telephone": "+84913446353",
+      "telephone": "+84388279279",
       "email": "DSTCC.JSC@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Số 10 Xuân Thiều 25",
+        "streetAddress": "Số 10 Xuân Thiều 26",
         "addressLocality": "Đà Nẵng",
         "addressCountry": "VN"
       },
@@ -68,6 +68,10 @@
 
     <!-- CSS riÃªng cho trang LAS-XD -->
     <link href="../assets/css/las-xd.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVPLCVM7M8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MVPLCVM7M8');</script>
 </head>
 
 <body>
@@ -106,7 +110,7 @@
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-center gap-1">
                     <li class="nav-item"><a class="nav-link" href="../gioi-thieu/index.html">Giới thiệu</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="../dich-vu/index.html" role="button"
+                        <a class="nav-link dropdown-toggle active" href="../dich-vu/" role="button"
                             data-bs-toggle="dropdown">Lĩnh vực</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="thiet-ke-thi-cong.html"><i
@@ -137,7 +141,7 @@
             <nav aria-label="breadcrumb" class="mb-4">
                 <ol class="breadcrumb mb-0" style="background:none;padding:0;">
                     <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
-                    <li class="breadcrumb-item"><a href="../dich-vu/index.html">Lĩnh vực</a></li>
+                    <li class="breadcrumb-item"><a href="../dich-vu/">Lĩnh vực</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Thí nghiệm & Kiểm định</li>
                 </ol>
             </nav>
@@ -923,7 +927,7 @@
                         <a href="../lien-he/index.html" class="btn-cta-dark">
                             <i class="bi bi-send-fill"></i> Gửi yêu cầu báo giá
                         </a>
-                        <a href="tel:+84913446353" class="btn-cta-outline-dark">
+                        <a href="tel:+84388279279" class="btn-cta-outline-dark">
                             <i class="bi bi-telephone-fill"></i> Gọi Hotline ngay
                         </a>
                     </div>
@@ -1135,6 +1139,25 @@
             filterCards(); // init
         })();
     </script>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-bottom-nav" id="mobileBottomNav">
+        <div class="mobile-bottom-nav-inner">
+            <a href="../" class="mobile-nav-item"><i class="bi bi-house-fill"></i><span>Trang chủ</span></a>
+            <a href="../dich-vu/" class="mobile-nav-item active"><i class="bi bi-tools"></i><span>Dịch vụ</span></a>
+            <a href="tel:+84388279279" class="mobile-nav-item cta-call"><div class="mobile-nav-cta-btn"><i class="bi bi-telephone-fill"></i></div><span>Gọi ngay</span></a>
+            <a href="../du-an/" class="mobile-nav-item"><i class="bi bi-grid-3x3-gap-fill"></i><span>Dự án</span></a>
+            <a href="../lien-he/" class="mobile-nav-item"><i class="bi bi-chat-dots-fill"></i><span>Liên hệ</span></a>
+        </div>
+    </div>
+
+    <!-- Facebook Messenger -->
+    <script>
+        var chatbox=document.createElement('div');chatbox.id='fb-customer-chat';chatbox.className='fb-customerchat';chatbox.setAttribute('page_id','106618588452865');chatbox.setAttribute('attribution','biz_inbox');document.body.appendChild(chatbox);
+        window.fbAsyncInit=function(){FB.init({xfbml:true,version:'v12.0'});};
+        (function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+    </script>
+    <script src="../js/enhancements.js"></script>
 </body>
 
 </html>

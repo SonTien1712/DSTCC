@@ -39,61 +39,16 @@
         rel="stylesheet">
 
     <!-- CSS: Base → Mobile (load mobile AFTER base) -->
-    <link href="../assets/css/style-v3.css" rel="stylesheet">
-    <link href="../assets/css/style-mobile.css" rel="stylesheet">
-
-</head>
-
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
-
-    <!-- ============================================================
-<!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <!-- ✅ SEO Title & Meta Description -->
-    <title>Liên Hệ Tư Vấn Xây Dựng Đà Nẵng | DSTCC</title>
-    <meta name="description"
-        content="Công ty DSTCC sẵn sàng hỗ trợ bạn. Gửi yêu cầu tư vấn giám sát, thí nghiệm vật liệu xây dựng và báo giá thi công nhanh nhất ngay tại đây.">
-
-    <!-- ✅ Canonical & Keywords -->
-    <link rel="canonical" href="https://dstcc.vn/lien-he/">
-    <meta name="keywords" content="địa chỉ phòng lab đà nẵng, số điện thoại DSTCC, gửi hồ sơ thầu, phòng thí nghiệm LAS XD 15021">
-    <meta name="robots" content="index, follow">
-
-    <!-- ✅ Open Graph (Facebook/Zalo) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dstcc.vn/lien-he/index.html">
-    <meta property="og:title" content="Liên Hệ Tư Vấn Xây Dựng Đà Nẵng | DSTCC">
-    <meta property="og:description" content="Bạn cần báo giá thí nghiệm kiểm định? Hãy liên hệ phòng thí nghiệm LAS-XD của DSTCC tại Đà Nẵng.">
-
-    <!-- ✅ Performance Enhancements -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Swiper.js -->
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS: Base → Mobile (load mobile AFTER base) -->
     <link href="../assets/css/tokens.css" rel="stylesheet">
 <link href="../assets/css/layout.css" rel="stylesheet">
 <link href="../assets/css/components.css" rel="stylesheet">
 <link href="../assets/css/sections.css" rel="stylesheet">
 <link href="../assets/css/mobile.css" rel="stylesheet">
 <link href="../assets/css/about.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVPLCVM7M8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MVPLCVM7M8');</script>
 
 </head>
 
@@ -378,7 +333,6 @@
             </div>
         </div>
     </footer>
-</script>
     <!-- ✅ Schema: LocalBusiness -->
     <script type="application/ld+json">
 {
@@ -391,11 +345,11 @@
   "image": "https://dstcc.vn/image/og-thumbnail.jpg",
   "description": "Thí nghiệm kiểm định vật liệu xây dựng, tư vấn thiết kế, giám sát thi công và khảo sát địa chất tại miền Trung – Tây Nguyên.",
   "foundingDate": "2011",
-  "telephone": "+84913446353",
+  "telephone": "+84388279279",
   "email": "DSTCC.JSC@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Số 10 Xuân Thiều 25",
+    "streetAddress": "Số 10 Xuân Thiều 26",
     "addressLocality": "Đà Nẵng",
     "addressRegion": "Đà Nẵng",
     "postalCode": "550000",
@@ -432,6 +386,23 @@
 }
 </script>
 
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-bottom-nav" id="mobileBottomNav">
+        <div class="mobile-bottom-nav-inner">
+            <a href="../" class="mobile-nav-item"><i class="bi bi-house-fill"></i><span>Trang chủ</span></a>
+            <a href="../dich-vu/" class="mobile-nav-item"><i class="bi bi-tools"></i><span>Dịch vụ</span></a>
+            <a href="tel:+84388279279" class="mobile-nav-item cta-call"><div class="mobile-nav-cta-btn"><i class="bi bi-telephone-fill"></i></div><span>Gọi ngay</span></a>
+            <a href="../du-an/" class="mobile-nav-item"><i class="bi bi-grid-3x3-gap-fill"></i><span>Dự án</span></a>
+            <a href="../lien-he/" class="mobile-nav-item active"><i class="bi bi-chat-dots-fill"></i><span>Liên hệ</span></a>
+        </div>
+    </div>
+
+    <!-- Facebook Messenger -->
+    <script>
+        var chatbox=document.createElement('div');chatbox.id='fb-customer-chat';chatbox.className='fb-customerchat';chatbox.setAttribute('page_id','106618588452865');chatbox.setAttribute('attribution','biz_inbox');document.body.appendChild(chatbox);
+        window.fbAsyncInit=function(){FB.init({xfbml:true,version:'v12.0'});};
+        (function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+    </script>
     <script src="../js/enhancements.js"></script>
 </body>
 

@@ -93,6 +93,10 @@
             counter-reset: step-counter;
         }
     </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVPLCVM7M8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MVPLCVM7M8');</script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
@@ -102,7 +106,7 @@
         <div class="container">
             <div class="top-info-inner">
                 <div class="top-info-left">
-                    <span><i class="bi bi-telephone-fill"></i> <a href="tel:+84913446353" class="text-white text-decoration-none">0913 446 353</a></span>
+                    <span><i class="bi bi-telephone-fill"></i> <a href="tel:+84388279279" class="text-white text-decoration-none">0388.279.279</a></span>
                     <span><i class="bi bi-envelope-fill"></i> <a href="mailto:DSTCC.JSC@gmail.com" class="text-white text-decoration-none">DSTCC.JSC@GMAIL.COM</a></span>
                 </div>
                 <div class="top-info-right d-none d-lg-block">
@@ -281,7 +285,7 @@
                 <h2 class="fw-bold mb-3 position-relative" style="font-family: 'Barlow Condensed', sans-serif; z-index: 1;">BẠN CÓ DỰ ÁN CẦN TƯ VẤN THIẾT KẾ?</h2>
                 <p class="mb-4 fs-5 position-relative" style="z-index: 1; max-width: 700px; margin: 0 auto;">Hãy để các chuyên gia của DSTCC giúp bạn tối ưu hóa kết cấu và hiện thực hóa ý tưởng của bạn thành một công trình bền vững.</p>
                 <div class="d-flex justify-content-center gap-3 position-relative" style="z-index: 1;">
-                    <a href="tel:+84913446353" class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow"><i class="bi bi-telephone mb-1 me-2"></i>Gọi ngay: 0913 446 353</a>
+                    <a href="tel:+84388279279" class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow"><i class="bi bi-telephone mb-1 me-2"></i>Gọi ngay: 0388.279.279</a>
                     <a href="../#lien-he" class="btn btn-outline-light fw-bold px-4 py-2 rounded-pill">Gửi yêu cầu trực tuyến</a>
                 </div>
             </div>
@@ -329,8 +333,8 @@
             </div>
             <hr class="footer-divider">
             <div class="d-flex flex-wrap justify-content-between align-items-center footer-bottom">
-                <span>© 2026 DSTCC. All rights reserved.</span>
-                <span>Designed by DSTCC Tech Team</span>
+                <span>© 2026 DSTCC. All rights reserved. — MST: 0401770xxx</span>
+                <span>Designed &amp; Developed by DSTCC Tech Team</span>
             </div>
         </div>
     </footer>
@@ -342,5 +346,24 @@
             navbar.classList.toggle('scrolled', window.scrollY > 60);
         });
     </script>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-bottom-nav" id="mobileBottomNav">
+        <div class="mobile-bottom-nav-inner">
+            <a href="../" class="mobile-nav-item"><i class="bi bi-house-fill"></i><span>Trang chủ</span></a>
+            <a href="../dich-vu/" class="mobile-nav-item active"><i class="bi bi-tools"></i><span>Dịch vụ</span></a>
+            <a href="tel:+84388279279" class="mobile-nav-item cta-call"><div class="mobile-nav-cta-btn"><i class="bi bi-telephone-fill"></i></div><span>Gọi ngay</span></a>
+            <a href="../du-an/" class="mobile-nav-item"><i class="bi bi-grid-3x3-gap-fill"></i><span>Dự án</span></a>
+            <a href="../lien-he/" class="mobile-nav-item"><i class="bi bi-chat-dots-fill"></i><span>Liên hệ</span></a>
+        </div>
+    </div>
+
+    <!-- Facebook Messenger -->
+    <script>
+        var chatbox=document.createElement('div');chatbox.id='fb-customer-chat';chatbox.className='fb-customerchat';chatbox.setAttribute('page_id','106618588452865');chatbox.setAttribute('attribution','biz_inbox');document.body.appendChild(chatbox);
+        window.fbAsyncInit=function(){FB.init({xfbml:true,version:'v12.0'});};
+        (function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+    </script>
+    <script src="../js/enhancements.js"></script>
 </body>
 </html>
