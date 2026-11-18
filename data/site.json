@@ -1,0 +1,26 @@
+{
+  "url": "https://dstcc.com.vn",
+  "name": "Công ty CP Khoa học Công nghệ & Tư vấn Xây dựng Đà Nẵng",
+  "shortName": "DSTCC",
+  "phone": "+84388279279",
+  "phoneLabel": "0388.279.279",
+  "email": "DSTCC.JSC@gmail.com",
+  "address": "08-10 Xuân Thiều 26, P. Hải Vân, TP. Đà Nẵng",
+  "labName": "Phòng Thí nghiệm Trọng điểm",
+  "labAddress": "08-10 Xuân Thiều 26, P. Hải Vân, TP. Đà Nẵng",
+  "sampleNotice": "Vui lòng liên hệ trước để được hướng dẫn gửi mẫu.",
+  "declaration": {
+    "source": "dich-vu/cong_bo/SCAN1185-Scan công bố Las.pdf",
+    "url": "/dich-vu/cong_bo/cong-bo-nang-luc-dstcc-2026.pdf",
+    "number": "01/CB-DSTCC",
+    "date": "2026-03-24",
+    "authority": "Sở Xây dựng TP. Đà Nẵng",
+    "authorityUrl": "https://sxd.danang.gov.vn/chi-tiet-tin-tuc?dinhdanh=771904"
+  },
+  "web3formsAccessKey": "",
+  "analyticsId": "G-MVPLCVM7M8",
+  "social": {
+    "facebook": "https://www.facebook.com/DSTCC",
+    "youtube": "https://www.youtube.com/@DSTCC"
+  }
+}

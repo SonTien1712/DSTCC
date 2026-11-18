@@ -1,0 +1,72 @@
+<header class="swiss-page-hero">
+  <img class="hero-bg-img page-hero-backdrop" src="/assets/image/themes_img_1.webp" alt="Hồ sơ công bố năng lực Phòng Thí nghiệm Trọng điểm DSTCC">
+  <div class="container swiss-page-hero-inner">
+    <p class="eyebrow">Tài liệu pháp lý &amp; kỹ thuật · DSTCC</p>
+    <h1>Hồ sơ công bố năng lực</h1>
+    <p class="page-lead">Công bố thông tin về năng lực đủ điều kiện hoạt động thí nghiệm chuyên ngành xây dựng của {{name}}.</p>
+    <div class="action-row">
+      <a class="btn-hero-primary" href="{{declarationUrl}}" target="_blank" rel="noopener">Mở hồ sơ công bố (PDF) <span aria-hidden="true">↗</span></a>
+      <a class="btn-hero-secondary" href="{{declarationUrl}}" download>Tải hồ sơ PDF ({{declarationSize}}) <span aria-hidden="true">↓</span></a>
+      <a class="btn-hero-ghost" href="tel:{{phone}}"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Gọi tư vấn {{phoneLabel}}</a>
+    </div>
+  </div>
+</header>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="declaration-overview-grid">
+      <div>
+        <div class="section-heading-row mb-4">
+          <div>
+            <p class="eyebrow">Thông tin định danh</p>
+            <h2 class="section-title">Tóm tắt hồ sơ công bố</h2>
+          </div>
+        </div>
+        <dl class="declaration-facts">
+          <div><dt>Tổ chức công bố</dt><dd>{{name}}</dd></div>
+          <div><dt>Phòng thí nghiệm</dt><dd>{{labName}}</dd></div>
+          <div><dt>Số văn bản</dt><dd><strong>{{declarationNumber}}</strong></dd></div>
+          <div><dt>Ngày công bố</dt><dd>{{declarationDate}}</dd></div>
+          <div><dt>Địa chỉ công ty &amp; phòng thí nghiệm</dt><dd>{{address}}<small>{{sampleNotice}}</small></dd></div>
+          <div><dt>Nguồn công bố chính thức</dt><dd>{{declarationAuthority}}<small><a class="external-url-link" href="{{declarationAuthorityUrl}}" target="_blank" rel="noopener noreferrer">{{declarationAuthorityUrl}} <span aria-hidden="true">↗</span></a></small></dd></div>
+          <div><dt>Liên hệ trực tiếp</dt><dd><a href="tel:{{phone}}">{{phoneLabel}}</a> · <a href="mailto:{{email}}">{{email}}</a></dd></div>
+        </dl>
+      </div>
+      <aside class="declaration-facility-card" data-image-slot="SLOT-DECLARATION-FACILITY">
+        <figure class="declaration-facility-figure">
+          <img src="/anh_truc_dien_cong_ty.webp" alt="Tòa nhà trụ sở và Phòng Thí nghiệm Trọng điểm DSTCC tại Xuân Thiều 26, Đà Nẵng">
+          <figcaption>
+            <strong>{{labName}} — {{shortName}}</strong>
+            <span>{{labAddress}}</span>
+          </figcaption>
+        </figure>
+      </aside>
+    </div>
+
+    <div class="authority-verify-card">
+      <div class="authority-verify-body">
+        <p class="eyebrow">Cổng thông tin {{declarationAuthority}}</p>
+        <h2>Công bố thông tin đủ điều kiện năng lực hoạt động thí nghiệm</h2>
+        <p>Tra cứu bài đăng công bố chính thức trên Cổng thông tin điện tử {{declarationAuthority}}:</p>
+        <a class="authority-url-display" href="{{declarationAuthorityUrl}}" target="_blank" rel="noopener noreferrer">{{declarationAuthorityUrl}} <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="action-row">
+        <a class="btn-swiss-outline" href="{{declarationAuthorityUrl}}" target="_blank" rel="noopener noreferrer">Xem trên Sở Xây dựng Đà Nẵng <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <div class="document-actions">
+      <div>
+        <h2>Bản scan hồ sơ công bố năng lực</h2>
+        <p>Văn bản số {{declarationNumber}} · Ngày {{declarationDate}} · Định dạng PDF ({{declarationSize}})</p>
+      </div>
+      <div class="action-row">
+        <a class="btn-hero-primary" href="{{declarationUrl}}" target="_blank" rel="noopener">Mở hồ sơ công bố <span aria-hidden="true">↗</span></a>
+        <a class="btn-swiss-outline" href="{{declarationUrl}}" download>Tải hồ sơ PDF</a>
+        <a class="btn-swiss-outline" href="tel:{{phone}}">Gọi tư vấn</a>
+      </div>
+    </div>
+    <p class="text-muted mb-3">Nếu khung xem tài liệu bên dưới chưa hiển thị trên trình duyệt điện thoại, vui lòng dùng nút <strong>Mở hồ sơ công bố</strong> hoặc <strong>Tải hồ sơ PDF</strong> phía trên.</p>
+    <object class="pdf-preview" data="{{declarationUrl}}" type="application/pdf" aria-label="Bản scan hồ sơ công bố năng lực DSTCC"><p><a href="{{declarationUrl}}">Mở hồ sơ công bố DSTCC</a></p></object>
+  </div>
+</section>

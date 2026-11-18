@@ -1,0 +1,29 @@
+<footer class="footer-main">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-company">
+        <div class="footer-identity"><div class="footer-brand"><img src="/image/anhdaidien_png.png" alt="DSTCC" width="256" height="256" loading="lazy" decoding="async"></div><p class="footer-name">{{name}}</p></div>
+        <p class="footer-address"><strong>Địa chỉ công ty &amp; phòng thí nghiệm</strong><br>{{address}}</p>
+        <div class="footer-contact"><a href="tel:{{phone}}">{{phoneLabel}}</a><a href="mailto:{{email}}">{{email}}</a></div>
+      </div>
+      <div class="footer-group">
+        <h2 class="footer-heading">Phòng thí nghiệm</h2>
+        <p>{{labName}}</p><p>{{labAddress}}</p><p>{{sampleNotice}}</p>
+      </div>
+      <div class="footer-group">
+        <h2 class="footer-heading">Thông tin</h2>
+        <ul class="list-unstyled"><li><a href="/dich-vu/thi-nghiem-las-xd">Năng lực thí nghiệm</a></li><li><a href="/dich-vu/phong-thi-nghiem-las-xd">Hồ sơ công bố</a></li><li><a href="/lien-he">Liên hệ tư vấn</a></li><li><a href="{{declarationUrl}}" target="_blank" rel="noopener">Mở hồ sơ DSTCC (PDF)</a></li></ul>
+      </div>
+    </div>
+    <hr class="footer-divider"><p class="footer-bottom mb-0">© {{year}} DSTCC. Bảo lưu mọi quyền.</p>
+  </div>
+</footer>
+<nav class="mobile-bottom-nav" aria-label="Điều hướng nhanh trên điện thoại">
+  <div class="mobile-bottom-nav-inner">
+    <a href="/" class="mobile-nav-item{{activeHome}}"{{currentHome}}><i class="bi bi-house" aria-hidden="true"></i><span>Trang chủ</span></a>
+    <a href="/dich-vu/thi-nghiem-las-xd" class="mobile-nav-item{{activeServices}}"{{currentServices}}><i class="bi bi-grid" aria-hidden="true"></i><span>Năng lực</span></a>
+    <a href="tel:{{phone}}" class="mobile-nav-item cta-call"><span class="mobile-nav-cta-btn"><i class="bi bi-telephone-fill" aria-hidden="true"></i></span><span>Gọi tư vấn</span></a>
+    <a href="/dich-vu/phong-thi-nghiem-las-xd" class="mobile-nav-item{{activeDocuments}}"{{currentDocuments}}><i class="bi bi-file-earmark-text" aria-hidden="true"></i><span>Hồ sơ</span></a>
+    <a href="/lien-he" class="mobile-nav-item{{activeContact}}"{{currentContact}}><i class="bi bi-chat-dots" aria-hidden="true"></i><span>Liên hệ</span></a>
+  </div>
+</nav>

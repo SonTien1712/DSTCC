@@ -1,0 +1,67 @@
+<header class="swiss-page-hero">
+  <img class="hero-bg-img page-hero-backdrop" src="/assets/image/themes_img_1.webp" alt="Hoạt động thí nghiệm và kiểm định chất lượng công trình DSTCC">
+  <div class="container swiss-page-hero-inner">
+    <p class="eyebrow">Phòng Thí nghiệm Trọng điểm · DSTCC</p>
+    <h1>Năng lực thí nghiệm</h1>
+    <p class="page-lead">Các nhóm năng lực và phép thử tiêu biểu theo hồ sơ công bố số {{declarationNumber}} của DSTCC. Liên hệ trực tiếp để xác nhận phạm vi, tiêu chuẩn áp dụng và hướng dẫn gửi mẫu cho công trình của bạn.</p>
+    <div class="action-row">
+      <a class="btn-hero-primary" href="tel:{{phone}}"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Gọi {{phoneLabel}}</a>
+      <a class="btn-hero-secondary" href="/dich-vu/phong-thi-nghiem-las-xd">Xem hồ sơ công bố <span aria-hidden="true">↗</span></a>
+      <a class="btn-hero-ghost" href="/lien-he">Gửi yêu cầu tư vấn</a>
+    </div>
+    <div class="hero-meta-strip">
+      <span><strong>{{labGroupCount}}</strong> nhóm vật liệu &amp; hiện trường</span>
+      <span><strong>Hồ sơ:</strong> {{declarationNumber}} ({{declarationDate}})</span>
+      <span><strong>Địa chỉ:</strong> {{address}}</span>
+    </div>
+  </div>
+</header>
+
+<section class="capability-search-section" aria-label="Tìm năng lực thí nghiệm">
+  <div class="container">
+    <div class="search-toolbar">
+      <label for="labSearch" class="search-label">Tìm nhóm năng lực và phép thử tiêu biểu</label>
+      <div class="capability-search">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <input type="search" id="labSearch" placeholder="Nhập tên vật liệu (bê tông, nhựa đường, sơn kẻ đường…), phép thử hoặc mã TCVN, ASTM, AASHTO…" autocomplete="off" aria-describedby="searchHint">
+        <button id="clearSearch" type="button" aria-label="Xóa từ khóa tìm kiếm" hidden>×</button>
+      </div>
+      <p id="searchHint" role="status" aria-live="polite">Hiển thị <strong id="resultCount">{{labGroupCount}}</strong> nhóm năng lực</p>
+    </div>
+    <div class="quick-group-rail">
+      <nav class="quick-group-nav" aria-label="Chuyển nhanh đến nhóm năng lực">
+        {{capabilityQuickNav}}
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad capability-results" id="lab-categories" aria-label="Nhóm năng lực và phép thử tiêu biểu">
+  <div class="container">
+    <div class="capability-grid" id="testGrid">{{labCards}}</div>
+    <div id="noResults" class="empty-search" hidden>
+      <h2>Chưa tìm thấy kết quả phù hợp</h2>
+      <p>Bạn có thể xem hồ sơ công bố hoặc liên hệ DSTCC để xác nhận nhu cầu.</p>
+      <div class="action-row">
+        <a class="btn-swiss-outline" href="/dich-vu/phong-thi-nghiem-las-xd">Xem hồ sơ công bố</a>
+        <a class="btn-hero-primary" href="/lien-he">Liên hệ tư vấn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="declaration-band">
+  <div class="container declaration-band-inner">
+    <div>
+      <p class="eyebrow">Tài liệu gốc &amp; Nguồn công bố</p>
+      <h2>Đối chiếu hồ sơ công bố năng lực</h2>
+      <p>Số {{declarationNumber}} · Ngày {{declarationDate}} · Bản scan đầy đủ 320 chỉ tiêu &amp; danh mục thiết bị (PDF {{declarationSize}})</p>
+      <p class="declaration-authority-line">Công bố trên {{declarationAuthority}}: <a href="{{declarationAuthorityUrl}}" target="_blank" rel="noopener noreferrer">{{declarationAuthorityUrl}} <span aria-hidden="true">↗</span></a></p>
+    </div>
+    <div class="action-row">
+      <a class="btn-hero-primary" href="/dich-vu/phong-thi-nghiem-las-xd">Xem thông tin hồ sơ <span aria-hidden="true">↗</span></a>
+      <a class="btn-hero-secondary" href="{{declarationAuthorityUrl}}" target="_blank" rel="noopener noreferrer">Cổng TT Sở Xây dựng <span aria-hidden="true">↗</span></a>
+      <a class="btn-hero-ghost" href="{{declarationUrl}}" download>Tải hồ sơ DSTCC <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</section>

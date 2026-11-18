@@ -129,14 +129,13 @@
   background: linear-gradient(90deg, rgba(245, 168, 0, 0.1) 0%, rgba(245, 168, 0, 0.02) 100%);
   color: var(--primary);
   border-left-color: var(--accent);
-  padding-left: 28px;
 }
 .dropdown-item:hover i { transform: scale(1.15) translateX(1px); color: var(--accent-dark); }
 
-/* Hover dropdown (Desktop) */
+/* Desktop fallback when JavaScript is unavailable. */
 @media (min-width: 992px) {
-  .navbar .nav-item.dropdown:hover .dropdown-menu { display: block; }
-  .navbar .nav-item.dropdown:hover::after {
+  html:not(.js) .navbar .nav-item.dropdown:hover .dropdown-menu { display: block; }
+  html:not(.js) .navbar .nav-item.dropdown:hover::after {
     content: '';
     position: absolute;
     top: 100%; left: 0; right: 0;
@@ -546,11 +545,10 @@
   justify-content: center;
   color: var(--primary-dark);
   font-size: 1.3rem;
-  box-shadow: 0 4px 16px rgba(245, 168, 0, 0.5);
+  box-shadow: var(--shadow-sm);
   position: relative;
   top: -10px;
   transition: all 0.2s ease;
-  animation: pulse-cta 2.5s infinite;
 }
 .mobile-nav-item.cta-call span { margin-top: -6px; color: var(--primary); font-size: 0.6rem; }
 .mobile-nav-item.cta-call:active .mobile-nav-cta-btn { transform: scale(0.93); }

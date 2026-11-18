@@ -624,7 +624,7 @@
    ====================================================== */
 @media (max-width: 991px) {
     .contact-card {
-        border-radius: 12px;
+        border-radius: var(--radius-lg);
         overflow: visible;
         box-shadow: none;
     }
@@ -637,7 +637,7 @@
     .contact-sidebar {
         order: 2;
         padding: 28px 20px;
-        border-radius: 0 0 12px 12px;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     }
 
     /* Compact sidebar on mobile */
@@ -661,9 +661,9 @@
     .form-area {
         order: 1;
         padding: 24px 20px;
-        border-radius: 12px 12px 0 0;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
         background: #fff;
-        box-shadow: 0 4px 20px rgba(0, 40, 100, 0.08);
+        box-shadow: var(--shadow-md);
     }
 
     .form-area h3 {
@@ -687,11 +687,6 @@
 @media (max-width: 480px) {
     .form-area {
         padding: 20px 16px;
-    }
-
-    /* Show key contact info inline on small phones */
-    .contact-info-item:nth-child(n+4) {
-        display: none;
     }
 
     .form-control,
@@ -819,30 +814,16 @@
     justify-content: center;
     color: var(--primary-dark);
     font-size: 1.3rem;
-    box-shadow: 0 4px 16px rgba(245, 168, 0, 0.5);
+    box-shadow: var(--shadow-sm);
     position: relative;
     top: -10px;
     transition: all 0.2s ease;
-    animation: pulse-cta 2.5s infinite;
 }
 
 .mobile-nav-item.cta-call span {
     margin-top: -6px;
     color: var(--primary);
     font-size: 0.6rem;
-}
-
-@keyframes pulse-cta {
-
-    0%,
-    100% {
-        box-shadow: 0 4px 16px rgba(245, 168, 0, 0.5);
-    }
-
-    50% {
-        box-shadow: 0 4px 28px rgba(245, 168, 0, 0.8);
-        transform: scale(1.05);
-    }
 }
 
 .mobile-nav-item.cta-call:active .mobile-nav-cta-btn {

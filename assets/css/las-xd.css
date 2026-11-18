@@ -16,7 +16,7 @@
 /* ---- HERO ---- */
 .lab-hero {
     background: linear-gradient(155deg, rgba(0,37,84,.85) 0%, rgba(0,63,127,.75) 60%, rgba(0,20,50,.9) 100%),
-                url('../assets/image/themes_img_1.webp') center/cover no-repeat;
+                url('../image/themes_img_1.webp') center/cover no-repeat;
     padding: 140px 0 80px;
     position: relative;
     overflow: hidden;
@@ -93,7 +93,7 @@
 /* ---- WOW FACTOR — SPECIALIZED EQUIPMENT ---- */
 .wow-section { 
     background: linear-gradient(rgba(0,26,64,0.92), rgba(0,26,64,0.92)),
-                url('../assets/image/themes_img_2.webp') center/cover no-repeat fixed;
+                url('../image/themes_img_2.webp') center/cover no-repeat fixed;
     padding: 80px 0; 
 }
 .wow-section .section-title { color:#fff; }
@@ -216,7 +216,7 @@
 /* ---- CTA STRIP ---- */
 .cta-strip { 
     background: linear-gradient(135deg, rgba(245,168,0,0.95) 0%, rgba(199,133,0,0.95) 100%),
-                url('../assets/image/themes_img_4.webp') center/cover no-repeat;
+                url('../image/themes_img_4.webp') center/cover no-repeat;
     padding: 60px 0; 
 }
 .cta-strip h2 {
@@ -244,7 +244,7 @@
 /* ---- PROCESS ---- */
 .process-section { 
     background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-                url('../assets/image/themes_img_3.webp') center/cover no-repeat;
+                url('../image/themes_img_3.webp') center/cover no-repeat;
     padding: 80px 0; 
 }
 .process-steps { display:grid;grid-template-columns:repeat(4,1fr);gap:0; }

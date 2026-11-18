@@ -1,103 +1,51 @@
-/* ============================================================
-   main.js — DSTCC Website v3
-   Handles: navbar scroll, dot navigation, scroll reveal, swiper
-   ============================================================ */
+export function normalizeText(value) {
+  return String(value).toLocaleLowerCase('vi').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+}
 
-// ---- 1. STICKY NAVBAR — adds .scrolled class ----
-(function () {
-    const navbar = document.getElementById('mainNav');
-    if (!navbar) return;
-    const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 60);
-    window.addEventListener('scroll', onScroll, { passive: true });
-})();
+function initNavigation() {
+  const nav = document.getElementById('mainNav');
+  const toggle = nav?.querySelector('.navbar-toggler');
+  const menu = document.getElementById('navbarResponsive');
+  if (!nav || !toggle || !menu) return;
+  const setMenu = open => {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+    menu.classList.toggle('show', open);
+  };
+  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      toggle.focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!nav.contains(event.target) || event.target.closest('a')) setMenu(false);
+  });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 992) setMenu(false); }, {passive:true});
+  const setOffset = () => document.documentElement.style.setProperty('--nav-offset', nav.offsetHeight + 'px');
+  if ('ResizeObserver' in window) new ResizeObserver(setOffset).observe(nav);
+  const onScroll = () => { nav.classList.toggle('scrolled', window.scrollY > 60); setOffset(); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+}
 
+function initMotion() {
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
+  const observer=new IntersectionObserver(entries=>{
+    for(const entry of entries)if(entry.isIntersecting){entry.target.classList.remove('reveal-pending');entry.target.classList.add('visible');observer.unobserve(entry.target);}
+  },{threshold:0.06});
+  for(const element of document.querySelectorAll('.reveal')){
+    if(element.getBoundingClientRect().top>window.innerHeight)element.classList.add('reveal-pending');observer.observe(element);
+  }
+}
 
-// ---- 2. DOT NAVIGATION — active state tracking ----
-(function () {
-    const SECTION_IDS = [
-        'hero', 'gioi-thieu', 'linh-vuc',
-        'phong-thi-nghiem', 'chuyen-gia',
-        'du-an', 'tin-tuc', 'lien-he'
-    ];
-    const dots = document.querySelectorAll('#dot-nav a');
-    if (!dots.length) return;
+function initAnalytics() {
+  const id=document.body.dataset.analyticsId;
+  if(!/^G-[A-Z0-9]+$/.test(id||'')||['localhost','127.0.0.1','[::1]'].includes(location.hostname))return;
+  window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments);};
+  window.gtag('js',new Date());window.gtag('config',id);
+  const script=document.createElement('script');script.src=`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;script.async=true;document.head.append(script);
+}
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const id = entry.target.id;
-            dots.forEach(d => d.classList.remove('active'));
-            const activeDot = document.querySelector(`#dot-nav a[data-section="${id}"]`);
-            if (activeDot) activeDot.classList.add('active');
-        });
-    }, { rootMargin: '-40% 0px -50% 0px' });
-
-    SECTION_IDS.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-    });
-
-    // Smooth scroll on dot click
-    dots.forEach(dot => {
-        dot.addEventListener('click', e => {
-            e.preventDefault();
-            const target = document.querySelector(dot.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    });
-})();
-
-
-// ---- 3. SCROLL REVEAL — staggered entrance animation ----
-(function () {
-    const els = document.querySelectorAll('.reveal');
-    if (!els.length) return;
-
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (!entry.isIntersecting) return;
-            setTimeout(() => entry.target.classList.add('visible'), i * 85);
-            io.unobserve(entry.target);
-        });
-    }, { threshold: 0.08 });
-
-    els.forEach(el => io.observe(el));
-})();
-
-
-// ---- 4. SWIPER — Expert Advisors ----
-(function () {
-    if (typeof Swiper === 'undefined') return;
-    new Swiper('.advisor-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        breakpoints: {
-            576: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 }
-        }
-    });
-})();
-
-
-// ---- 5. FACEBOOK MESSENGER PLUGIN ----
-(function () {
-    const chatbox = document.createElement('div');
-    chatbox.id = 'fb-customer-chat';
-    chatbox.className = 'fb-customerchat';
-    chatbox.setAttribute('page_id', '106618588452865');
-    chatbox.setAttribute('attribution', 'biz_inbox');
-    document.body.appendChild(chatbox);
-
-    window.fbAsyncInit = function () { FB.init({ xfbml: true, version: 'v12.0' }); };
-    (function (d, s, id) {
-        if (d.getElementById(id)) return;
-        const js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-        d.head.appendChild(js);
-    }(document, 'script', 'facebook-jssdk'));
-})();
+if(typeof document!=='undefined'){document.documentElement.classList.add('js');initNavigation();initMotion();initAnalytics();}

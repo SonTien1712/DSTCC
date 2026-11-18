@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dstcc.com.vn/sitemap.xml

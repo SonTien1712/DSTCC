@@ -1,0 +1,161 @@
+<header class="home-lab-hero">
+  <img class="hero-bg-img home-hero-backdrop" src="/assets/image/hero-banner.webp" alt="Công trình hạ tầng giao thông và hoạt động thí nghiệm xây dựng DSTCC">
+  <div class="container home-lab-layout">
+    <div class="home-lab-copy">
+      <p class="eyebrow">Phòng Thí nghiệm Trọng điểm · DSTCC Đà Nẵng</p>
+      <h1>Thí nghiệm vật liệu &amp; kiểm định hiện trường.<br><span>Căn cứ kỹ thuật cho chất lượng công trình.</span></h1>
+      <p class="page-lead">Tiếp nhận thí nghiệm bê tông, nhựa đường, cốt liệu, đất nền, kim loại, vật liệu cầu, địa kỹ thuật, sơn giao thông và đo kiểm hiện trường theo hồ sơ công bố năng lực.</p>
+      <div class="action-row">
+        <a class="btn-hero-primary" href="/dich-vu/thi-nghiem-las-xd">Xem năng lực thí nghiệm <span aria-hidden="true">↗</span></a>
+        <a class="btn-hero-secondary" href="tel:{{phone}}"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Gọi {{phoneLabel}}</a>
+        <a class="btn-hero-ghost" href="/dich-vu/phong-thi-nghiem-las-xd">Hồ sơ công bố {{declarationNumber}}</a>
+      </div>
+    </div>
+    <aside class="home-hero-panel" aria-label="Thông tin tóm tắt phòng thí nghiệm">
+      <div class="hero-panel-header">
+        <span class="hero-panel-tag">Hồ sơ năng lực</span>
+        <strong>{{declarationNumber}} · {{declarationDate}}</strong>
+      </div>
+      <dl class="hero-panel-facts">
+        <div>
+          <dt>Đơn vị thực hiện</dt>
+          <dd>{{labName}} — {{shortName}}</dd>
+        </div>
+        <div>
+          <dt>Địa chỉ công ty &amp; phòng thí nghiệm</dt>
+          <dd>{{address}}<small>{{sampleNotice}}</small></dd>
+        </div>
+        <div>
+          <dt>Danh mục phục vụ</dt>
+          <dd>{{labGroupCount}} nhóm vật liệu &amp; thí nghiệm hiện trường</dd>
+        </div>
+      </dl>
+      <div class="hero-panel-footer">
+        <a href="/dich-vu/phong-thi-nghiem-las-xd">Xem &amp; tải PDF công bố ({{declarationSize}}) <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<section class="section-pad capability-home">
+  <div class="container">
+    <div class="section-heading-row">
+      <div>
+        <p class="eyebrow">Danh mục năng lực thí nghiệm</p>
+        <h2 class="section-title">Tra cứu theo nhóm vật liệu &amp; hạng mục công trình</h2>
+        <p class="section-sub">Chọn nhóm năng lực bên dưới để xem các phép thử tiêu biểu, mã tiêu chuẩn áp dụng (TCVN, ASTM, AASHTO, ISO) và thiết bị thí nghiệm tương ứng.</p>
+      </div>
+      <a class="btn-swiss-outline" href="/dich-vu/thi-nghiem-las-xd">Tra cứu &amp; tìm phép thử <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="capability-preview-grid">{{capabilityPreview}}</div>
+  </div>
+</section>
+
+<section class="section-pad facility-showcase" aria-labelledby="facility-heading">
+  <div class="container">
+    <div class="section-heading-row">
+      <div>
+        <p class="eyebrow">Cơ sở vật chất · Thiết bị · Nhân sự</p>
+        <h2 class="section-title" id="facility-heading">Hình ảnh thực tế tại DSTCC</h2>
+        <p class="section-sub">Trụ sở, Phòng Thí nghiệm Trọng điểm và hệ thống thiết bị chuyên ngành phục vụ công tác thử nghiệm vật liệu xây dựng và đo kiểm hiện trường.</p>
+      </div>
+      <a class="text-link" href="/dich-vu/phong-thi-nghiem-las-xd">Đối chiếu danh mục thiết bị trong hồ sơ <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <div class="facility-grid">
+      <!-- [SLOT-HOME-FACILITY] Ảnh mặt tiền trụ sở và phòng thí nghiệm -->
+      <figure class="facility-card facility-card-featured" data-image-slot="SLOT-HOME-FACILITY">
+        <div class="facility-img-wrap">
+          <img src="/anh_truc_dien_cong_ty.webp" alt="Tòa nhà trụ sở và Phòng Thí nghiệm Trọng điểm DSTCC tại Xuân Thiều 26, Đà Nẵng">
+          <span class="slot-badge"><i class="bi bi-building" aria-hidden="true"></i> Cơ sở DSTCC</span>
+        </div>
+        <figcaption class="facility-caption">
+          <div class="facility-caption-meta">
+            <span>Địa chỉ: 08-10 Xuân Thiều 26</span>
+            <span>{{labName}}</span>
+          </div>
+          <h3>Trụ sở công ty &amp; Phòng thí nghiệm</h3>
+          <p>Địa chỉ tại {{address}}. {{sampleNotice}}</p>
+        </figcaption>
+      </figure>
+
+      <!-- [SLOT-HOME-EQUIPMENT-1] Ảnh thiết bị thử nghiệm bê tông nhựa thực tế -->
+      <figure class="facility-card" data-image-slot="SLOT-HOME-EQUIPMENT-1">
+        <div class="facility-img-wrap">
+          <img src="/anh_may_han_lun_vet_banh_xe.jpg" alt="Máy thí nghiệm vệt hằn lún bánh xe bê tông nhựa tại phòng thí nghiệm DSTCC">
+          <span class="slot-badge"><i class="bi bi-cpu" aria-hidden="true"></i> Thiết bị chuyên ngành</span>
+        </div>
+        <figcaption class="facility-caption">
+          <div class="facility-caption-meta">
+            <span>Nhựa đường &amp; BTN</span>
+            <span>TCVN 13899:2023 · AASHTO T324</span>
+          </div>
+          <h3>Máy thí nghiệm độ sâu vệt hằn bánh xe</h3>
+          <p>Đánh giá khả năng kháng hằn lún vệt bánh xe của hỗn hợp bê tông nhựa cùng hệ thống thiết bị Marshall, Brookfield.</p>
+        </figcaption>
+      </figure>
+
+      <!-- [SLOT-HOME-EQUIPMENT-2] Điểm đánh dấu để cập nhật thêm ảnh thiết bị kéo/nén/cơ lý (bỏ thuộc tính hidden khi đã thay ảnh mới) -->
+      <figure class="facility-card facility-card-marked" data-image-slot="SLOT-HOME-EQUIPMENT-2" hidden>
+        <!-- TODO(image-slot): Thay src="/assets/image/themes_img_2.webp" bằng ảnh thực tế khu vực máy nén bê tông / máy kéo thép và xóa thuộc tính hidden -->
+        <div class="facility-img-wrap">
+          <img src="/assets/image/themes_img_2.webp" alt="Hoạt động thí nghiệm cơ lý bê tông, cốt liệu và kết cấu vật liệu">
+          <span class="slot-badge"><i class="bi bi-cpu" aria-hidden="true"></i> Thiết bị cơ lý</span>
+        </div>
+        <figcaption class="facility-caption">
+          <div class="facility-caption-meta">
+            <span>Thiết bị thử nghiệm</span>
+            <span>Bê tông · Thép · Gối cầu</span>
+          </div>
+          <h3>Khu vực thiết bị thử nén, kéo uốn &amp; cơ lý vật liệu</h3>
+          <p>Hệ thống máy nén bê tông, máy kéo nén vạn năng và thiết bị kiểm tra cơ lý vật liệu xây dựng tại phòng thí nghiệm.</p>
+        </figcaption>
+      </figure>
+
+      <!-- [SLOT-HOME-STAFF] Điểm đánh dấu để cập nhật ảnh đội ngũ thí nghiệm viên & hiện trường (bỏ thuộc tính hidden khi đã thay ảnh mới) -->
+      <figure class="facility-card facility-card-marked" data-image-slot="SLOT-HOME-STAFF" hidden>
+        <!-- TODO(image-slot): Thay src="/assets/image/themes_img_4.webp" bằng ảnh đội ngũ nhân sự / thí nghiệm viên và xóa thuộc tính hidden -->
+        <div class="facility-img-wrap">
+          <img src="/assets/image/themes_img_4.webp" alt="Hoạt động thí nghiệm hiện trường và kiểm tra chất lượng công trình">
+          <span class="slot-badge"><i class="bi bi-people" aria-hidden="true"></i> Nhân sự &amp; Hiện trường</span>
+        </div>
+        <figcaption class="facility-caption">
+          <div class="facility-caption-meta">
+            <span>Đội ngũ chuyên môn</span>
+            <span>Phòng thí nghiệm &amp; Hiện trường</span>
+          </div>
+          <h3>Đội ngũ kỹ sư &amp; thí nghiệm viên thực hiện phép thử</h3>
+          <p>Trực tiếp thực hiện các phép thử trong phòng thí nghiệm và đo kiểm chất lượng nền, mặt đường tại công trình.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="declaration-band">
+  <div class="container declaration-band-inner">
+    <div>
+      <p class="eyebrow">Căn cứ năng lực</p>
+      <h2>Hồ sơ công bố năng lực thí nghiệm DSTCC</h2>
+      <p>Văn bản số {{declarationNumber}} · Ngày {{declarationDate}} · Bản scan đầy đủ danh mục phép thử và thiết bị ({{declarationSize}})</p>
+    </div>
+    <div class="action-row">
+      <a class="btn-hero-primary" href="/dich-vu/phong-thi-nghiem-las-xd">Xem hồ sơ công bố <span aria-hidden="true">↗</span></a>
+      <a class="btn-hero-ghost" href="{{declarationUrl}}" download>Tải bản PDF <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container contact-strip">
+    <div>
+      <p class="eyebrow">Tiếp nhận yêu cầu B2B</p>
+      <h2>Trao đổi yêu cầu thí nghiệm &amp; gửi mẫu</h2>
+      <p>Liên hệ trực tiếp qua điện thoại hoặc gửi danh mục vật liệu, tiêu chuẩn yêu cầu để DSTCC phản hồi phạm vi thực hiện và hướng dẫn gửi mẫu tại {{labAddress}}.</p>
+    </div>
+    <div class="action-row">
+      <a class="btn-hero-primary" href="/lien-he">Gửi yêu cầu tư vấn <span aria-hidden="true">↗</span></a>
+      <a class="btn-swiss-outline" href="tel:{{phone}}"><i class="bi bi-telephone-fill" aria-hidden="true"></i> {{phoneLabel}}</a>
+    </div>
+  </div>
+</section>

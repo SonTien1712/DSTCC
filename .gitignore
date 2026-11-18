@@ -1,1 +1,7 @@
 .vercel
+dist/
+/dich-vu/cong_bo/cong-bo-nang-luc-dstcc-2026.pdf
+node_modules/
+tmp/
+__pycache__/
+*.pyc

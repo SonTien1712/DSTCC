@@ -1,0 +1,124 @@
+[
+  {
+    "file": "dich-vu/index.html",
+    "title": "Tư Vấn Giám Sát & Thi Công Cầu Đường | DSTCC",
+    "description": "Cung cấp dịch vụ tư vấn giám sát, thiết kế và thi công các công trình giao thông cầu đường, kiểm định chất lượng uy tín tại miền Trung.",
+    "nav": "Services",
+    "noindex": true
+  },
+  {
+    "file": "dich-vu/phong-thi-nghiem-las-xd.html",
+    "title": "Hồ sơ công bố năng lực thí nghiệm | DSTCC",
+    "description": "Hồ sơ công bố năng lực DSTCC số 01/CB-DSTCC ngày 24/03/2026. Thông tin phòng thí nghiệm, địa chỉ và bản scan PDF.",
+    "nav": "Documents"
+  },
+  {
+    "file": "dich-vu/thi-nghiem-las-xd.html",
+    "title": "Năng lực thí nghiệm vật liệu & hiện trường | DSTCC",
+    "description": "Tìm nhóm năng lực và phép thử tiêu biểu của DSTCC về bê tông, nhựa đường, đất, vật liệu giao thông và thí nghiệm hiện trường.",
+    "nav": "Services",
+    "styles": [],
+    "scripts": [
+      "las-xd"
+    ]
+  },
+  {
+    "file": "dich-vu/thiet-ke-thi-cong.html",
+    "title": "Thiết Kế & Thi Công Công Trình Giao Thông | DSTCC",
+    "description": "Cung cấp dịch vụ tư vấn thiết kế, lập dự án và thi công các công trình giao thông, dân dụng và công nghiệp với hơn 15 năm kinh nghiệm.",
+    "nav": "Services",
+    "noindex": true
+  },
+  {
+    "file": "dich-vu/tu-van-giam-sat.html",
+    "title": "Tư Vấn Giám Sát Thi Công Công Trình | DSTCC",
+    "description": "Dịch vụ tư vấn giám sát thi công cầu đường, dân dụng và công nghiệp. Đảm bảo chất lượng, tiến độ và an toàn lao động với đội ngũ kỹ sư chuyên nghiệp của DSTCC.",
+    "nav": "Services",
+    "noindex": true
+  },
+  {
+    "file": "du-an/index.html",
+    "title": "Dự Án Cầu Đường Tiêu Biểu Miền Trung | DSTCC",
+    "description": "Khám phá các dự án công trình cầu đường, hạ tầng giao thông tiêu biểu mà DSTCC đã tư vấn giám sát và điểm định tại miền Trung.",
+    "nav": "Projects",
+    "scripts": [
+      "projects"
+    ],
+    "noindex": true
+  },
+  {
+    "file": "du-an/project-template.html",
+    "title": "Chi Tiết Dự Án | DSTCC",
+    "description": "Thông tin chi tiết về các dự án thi công và tư vấn giám sát cầu đường, hạ tầng giao thông tiêu biểu mà DSTCC đang thực hiện.",
+    "nav": "Projects",
+    "noindex": true,
+    "canonical": "/du-an"
+  },
+  {
+    "file": "gioi-thieu/index.html",
+    "title": "Công Ty Tư Vấn Xây Dựng Đà Nẵng Uy Tín | DSTCC",
+    "description": "Đơn vị tư vấn xây dựng uy tín hàng đầu tại Đà Nẵng và miền Trung. Chuyên thí nghiệm kiểm định LAS-XD, giám sát thi công cầu đường và khảo sát địa chất.",
+    "nav": "About",
+    "styles": [
+      "about"
+    ],
+    "noindex": true
+  },
+  {
+    "file": "index.html",
+    "title": "DSTCC | Thí nghiệm chuyên ngành xây dựng tại Đà Nẵng",
+    "description": "Các nhóm năng lực thí nghiệm vật liệu và hiện trường của DSTCC. Xem hồ sơ công bố và liên hệ tư vấn yêu cầu công trình.",
+    "nav": "Home"
+  },
+  {
+    "file": "lien-he/index.html",
+    "title": "Liên hệ tư vấn thí nghiệm xây dựng | DSTCC",
+    "description": "Liên hệ DSTCC để tư vấn thí nghiệm vật liệu và hiện trường. Điện thoại 0388.279.279, địa chỉ tại 08-10 Xuân Thiều 26, P. Hải Vân, TP. Đà Nẵng.",
+    "nav": "Contact",
+    "scripts": [
+      "form"
+    ]
+  },
+  {
+    "file": "tai-lieu-ky-thuat/index.html",
+    "title": "Tài Liệu Kỹ Thuật & Tiêu Chuẩn LAS-XD | DSTCC",
+    "description": "Hệ thống tài liệu chuyên ngành, biểu mẫu, quy trình thi công, nghiệm thu các công trình cầu đường tại Việt Nam cung cấp bởi DSTCC.",
+    "nav": "",
+    "noindex": true
+  },
+  {
+    "file": "tin-tuc/article-template.html",
+    "title": "Bài Viết Công Nghệ Xây Dựng | DSTCC",
+    "description": "Chi tiết nội dung bài viết và các tiêu chuẩn trong ngành tư vấn xây dựng, thí nghiệm chất lượng nền móng cầu đường.",
+    "nav": "News",
+    "noindex": true,
+    "canonical": "/tin-tuc/dao-tao-an-toan-thi-cong"
+  },
+  {
+    "file": "tin-tuc/index.html",
+    "title": "Tin Tức Công Trình & Sự Kiện | DSTCC",
+    "description": "Tin tức mới nhất về các quy chuẩn kỹ thuật xây dựng, thông tin nghiệm thu công trình và các hoạt động của công ty DSTCC.",
+    "nav": "News",
+    "scripts": [
+      "news"
+    ],
+    "noindex": true
+  },
+  {
+    "file": "tin-tuc/dao-tao-an-toan-thi-cong.html",
+    "title": "Đào tạo định kỳ siết chặt an toàn thi công | DSTCC",
+    "description": "Đảm bảo an toàn tuyệt đối tại các dự án mũi nhọn, nâng cao ý thức toàn đội ngũ trong mùa thi công cao điểm.",
+    "nav": "News",
+    "article": {
+      "date": "2026-03-09"
+    },
+    "noindex": true
+  },
+  {
+    "file": "404.html",
+    "title": "Không tìm thấy trang | DSTCC",
+    "description": "Trang không tồn tại. Quay về trang chủ hoặc liên hệ DSTCC.",
+    "noindex": true,
+    "nav": ""
+  }
+]
